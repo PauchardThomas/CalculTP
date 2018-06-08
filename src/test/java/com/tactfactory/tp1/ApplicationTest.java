@@ -1,4 +1,5 @@
 package com.tactfactory.tp1;
+
 import org.junit.Assert;
 
 import com.tactfactory.tp1.Application;
@@ -7,19 +8,15 @@ public class ApplicationTest {
 
 	@org.junit.Test
 	public void testAdd() {
-		int i =2 , j=3;
-		
-		int k = Operation.add(i,j);
-		
-		Assert.assertEquals(k,5);
+		int i = 2, j = 3;
+		int k = Operation.add(i, j);
+		Assert.assertEquals(k, 5);
 	}
-	
+
 	@org.junit.Test
 	public void testSubstract() {
-		int i =2 , j=3;
-		
-		int k = Operation.substract(i,j);
-		
-		Assert.assertEquals(k,-1);
+		int i = 2, j = 3;
+		int k = Operation.substract(i, j);
+		Assert.assertEquals(k, -1);
 	}
 }

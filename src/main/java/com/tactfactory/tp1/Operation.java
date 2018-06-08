@@ -1,5 +1,12 @@
+/* Copyright RENAULT Antoine 07/06/2018 */
+
 package com.tactfactory.tp1;
 
+/**
+ * Class Operation with different methods.
+ * @author Antoine
+ *
+ */
 public class Operation {
 	
     /**
