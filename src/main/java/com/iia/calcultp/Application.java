@@ -24,7 +24,8 @@ public final class Application {
        
         showMenu();
         
-        final String userInput = prompt("Veuillez saisir une option :");
+        Utils.message("Veuillez saisir une option : ");
+        final String userInput = new Scanner(System.in).nextLine();
         
         if ("q".equals(userInput)) {
             System.out.println("Au revoir!");
@@ -36,15 +37,6 @@ public final class Application {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }
         }
-    }
-    /**
-     * Get User input string.
-     * @param promptMessage prompt description.
-     * @return user prompt.
-     */
-    public static String prompt(final String promptMessage) {
-        System.out.println(promptMessage);
-        return new Scanner(System.in).nextLine();
     }
     /**
      * Show application menu.
@@ -80,16 +72,15 @@ public final class Application {
            try {
                result = Operation.add(number1, number2);
            } catch (NumberFormatException e) {
-               result = 0;
+               e.printStackTrace();
            }
-           
            break;
         case 2:
             // soustraction
             try {
                 result = Operation.substract(number1, number2);
             } catch (NumberFormatException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 3:
@@ -97,7 +88,7 @@ public final class Application {
             try {
                 result = Operation.multiply(number1, number2);
             } catch (NumberFormatException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 4:
@@ -109,7 +100,7 @@ public final class Application {
                 try {
                     result = Operation.divide(number1, number2);
                 } catch (NullPointerException e) {
-                    result = 0;
+                    e.printStackTrace();
                 }
                 
             }
@@ -119,7 +110,7 @@ public final class Application {
             try {
                 result = Operation.modulo(number1, number2);
             } catch (NumberFormatException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 6:
@@ -127,7 +118,7 @@ public final class Application {
             try {
                 result = Operation.pourcentage(number1);
             } catch (NullPointerException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 7:
@@ -158,7 +149,8 @@ public final class Application {
         String number;
         do
         {
-            number = prompt("Saisir une nombre");
+            Utils.message("Saisir un nombre : ");
+            number = new Scanner(System.in).nextLine();
         }while(!Utils.tryParseInt(number));
         
         return Integer.parseInt(number);
