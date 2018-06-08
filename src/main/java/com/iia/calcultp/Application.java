@@ -150,7 +150,8 @@ public final class Application {
         String number;
         do
         {
-            number = prompt("Saisir une nombre");
+            Utils.message("Saisir un nombre : ");
+            number = new Scanner(System.in).nextLine();
         }while(!Utils.tryParseInt(number));
         
         return Integer.parseInt(number);
