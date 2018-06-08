@@ -18,7 +18,7 @@ public final class Application {
 
     /**
      * Entry point of application.
-     * @param args Arguments from CLI
+     * @param args Arguments from CLI.
      */
     public static void main(final String[] args) {
        
@@ -29,18 +29,18 @@ public final class Application {
         if ("q".equals(userInput)) {
             System.out.println("Au revoir!");
             System.exit(0);
-        }else{
+        } else {
             if(!Utils.tryParseInt(userInput)) {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
-            }else{
+            } else {
                 selectOption(userInput);
             }
         }
     }
     /**
-     * Get User input string
-     * @param promptMessage prompt description
-     * @return user prompt
+     * Get User input string.
+     * @param promptMessage prompt description.
+     * @return user prompt.
      */
     public static String prompt(final String promptMessage) {
         final Scanner scanner = new Scanner(System.in);
@@ -50,7 +50,7 @@ public final class Application {
         return userInput;
     }
     /**
-     * Show application menu
+     * Show application menu.
      */
     public static void showMenu() {
         System.out.print("\r\n*************************************** \r\n");
@@ -67,11 +67,10 @@ public final class Application {
         System.out.print("8- Historique des opérations\r\n");
     }
     /**
-     * Select the option according user prompt
-     * @param userInput
+     * Select the option according user prompt.
+     * @param userInput.
      */
-    public static void selectOption(final String userInput)
-    {
+    public static void selectOption(final String userInput) {
         switch (Integer.parseInt(userInput)) {
         case 1:
             // addition
@@ -108,9 +107,9 @@ public final class Application {
 
     /**
      * Add two value.
-     * @param number1 first value
-     * @param number2 second value
-     * @return result of addition
+     * @param number1 first value.
+     * @param number2 second value.
+     * @return result of addition.
      */
     public static int add(final int number1, final int number2) {
         return number1 + number2;
