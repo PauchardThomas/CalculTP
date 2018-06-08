@@ -9,8 +9,17 @@ public class ApplicationTest {
 	public void testAdd() {
 		int i =2 , j=3;
 		
-		int k = Application.add(i,j);
+		int k = Operation.add(i,j);
 		
 		Assert.assertEquals(k,5);
+	}
+	
+	@org.junit.Test
+	public void testSubstract() {
+		int i =2 , j=3;
+		
+		int k = Operation.substract(i,j);
+		
+		Assert.assertEquals(k,-1);
 	}
 }

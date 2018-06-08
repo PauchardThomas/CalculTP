@@ -25,14 +25,4 @@ public final class Application {
         final DateTime dateTime = DateTime.now();
         System.out.print(dateTime);
     }
-
-    /**
-     * Add two value.
-     * @param number1 first value
-     * @param number2 second value
-     * @return result of addition
-     */
-    public static int add(final int number1, final int number2) {
-        return number1 + number2;
-    }
 }
