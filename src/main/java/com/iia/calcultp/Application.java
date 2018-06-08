@@ -70,8 +70,8 @@ public final class Application {
      */
     public static void selectOption(final String userInput) {
         
-        int number1 = getNumber();
-        int number2 = getNumber();
+        final int number1 = getNumber();
+        final int number2 = getNumber();
         int result = 0;
         boolean operationDone = true;
         
