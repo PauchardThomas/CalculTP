@@ -24,7 +24,8 @@ public final class Application {
        
         showMenu();
         
-        final String userInput = prompt("Veuillez saisir une option :");
+        Utils.message("Veuillez saisir une option : ");
+        final String userInput = new Scanner(System.in).nextLine();
         
         if ("q".equals(userInput)) {
             System.out.println("Au revoir!");
@@ -36,15 +37,6 @@ public final class Application {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }
         }
-    }
-    /**
-     * Get User input string.
-     * @param promptMessage prompt description.
-     * @return user prompt.
-     */
-    public static String prompt(final String promptMessage) {
-        System.out.println(promptMessage);
-        return new Scanner(System.in).nextLine();
     }
     /**
      * Show application menu.
