@@ -99,7 +99,7 @@ public final class SelectOperation {
      * @return result of addition.
      */
     public static int getNumber() {
-        String number;
+        String number = "";
         do
         {
             Utils.message("Saisir un nombre : ");
