@@ -12,7 +12,8 @@ import java.util.Scanner;
 public final class Application {
 
 
-    private Application() {
+    private static Scanner scanner;
+	private Application() {
         super();
     }
 
@@ -43,7 +44,7 @@ public final class Application {
      * @return user prompt.
      */
     public static String prompt(final String promptMessage) {
-        final Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         System.out.println(promptMessage);
         return scanner.nextLine().toString();
     }

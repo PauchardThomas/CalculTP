@@ -51,7 +51,7 @@ public final class Operation {
         return number1 / number2;
     }
     /**
-     * Modulo de 2 nombres
+     * Modulo de 2 nombres.
      * @param number1 first value
      * @param number2 second value
      * @return modulo
@@ -61,7 +61,7 @@ public final class Operation {
     }
     
     /**
-     * Pourcentage d une valeur
+     * Pourcentage d une valeur.
      * @param number1
      * @return pourcentage du nombre
      */
