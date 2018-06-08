@@ -12,7 +12,8 @@ import java.util.Scanner;
 public final class Application {
 
 
-    private Application() {
+    private static Scanner scanner;
+	private Application() {
         super();
     }
 

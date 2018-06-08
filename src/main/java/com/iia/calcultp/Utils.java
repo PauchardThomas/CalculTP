@@ -26,8 +26,8 @@ public final class Utils {
      * @return true si parsable , false si non parsable
      */
     public static boolean tryParseInt(final String value) {  
-        boolean result = false;
-    	try {  
+        boolean result;
+           try {  
             Integer.parseInt(value);  
             result =  true;  
          } catch (NumberFormatException e) {  
