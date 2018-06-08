@@ -1,5 +1,5 @@
 /* Copyright Pauchard Thomas 07/06/20 */
-package com.tactfactory.tp1;
+package com.iia.calcultp;
 
 /**
  * Fonction global to project.

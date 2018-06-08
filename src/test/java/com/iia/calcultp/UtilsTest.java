@@ -1,6 +1,8 @@
-package com.tactfactory.tp1;
+package com.iia.calcultp;
 
 import org.junit.Assert;
+
+import com.iia.calcultp.Utils;
 
 public final class UtilsTest {
     

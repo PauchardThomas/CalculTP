@@ -3,4 +3,4 @@
 /**
  * Main namespace of my application.
  */
-package com.tactfactory.tp1;
+package com.iia.calcultp;
