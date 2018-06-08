@@ -127,8 +127,6 @@ public final class Application {
     }    
     /**
      * Add two value.
-     * @param number1 first value.
-     * @param number2 second value.
      * @return result of addition.
      */
     public static int getNumber() {
