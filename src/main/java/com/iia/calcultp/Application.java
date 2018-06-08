@@ -31,10 +31,10 @@ public final class Application {
             System.out.println("Au revoir!");
             System.exit(0);
         } else {
-            if(!Utils.tryParseInt(userInput)) {
-                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
-            } else {
+            if(Utils.tryParseInt(userInput)) {
                 selectOption(userInput);
+            } else {
+                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }
         }
     }
@@ -44,9 +44,8 @@ public final class Application {
      * @return user prompt.
      */
     public static String prompt(final String promptMessage) {
-        scanner = new Scanner(System.in);
         System.out.println(promptMessage);
-        return scanner.nextLine().toString();
+        return new Scanner(System.in).nextLine();
     }
     /**
      * Show application menu.
