@@ -1,7 +1,16 @@
 package com.tactfactory.tp1;
 
-public class Operation {
-
+/**
+ * 
+ * @author Thomas
+ *
+ */
+public final class Operation {
+    
+    private Operation() {
+        super();
+    }
+    
     /**
      * Add two value.
      * @param number1 first value
@@ -42,3 +51,4 @@ public class Operation {
         return number1 / number2;
     }
 }
+

@@ -8,13 +8,23 @@ package com.tactfactory.tp1;
  */
 public final class Utils {
 
-	/**
-	 * Print message in console.
-	 * @param message
-	 */
+    private Utils() {
+        super();
+    }
+    
+    /**
+     * Print message in console.
+     *  @param message message a afficher
+     */
     public static void message(final String message) {
         System.out.print("\r\n" + message);
     }
+    
+    /**
+     * Essaie de parser une string en int.
+     * @param value valeur à parser
+     * @return
+     */
     public static boolean tryParseInt(String value) {  
         boolean result = false;
     	try {  

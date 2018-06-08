@@ -2,7 +2,9 @@ package com.tactfactory.tp1;
 
 import org.junit.Assert;
 
-public class UtilsTest {
+public final class UtilsTest {
+    
+    
 
     @org.junit.Test
     public void testTryParseIntWithInt() {
