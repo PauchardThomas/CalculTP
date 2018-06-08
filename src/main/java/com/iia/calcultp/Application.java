@@ -72,16 +72,15 @@ public final class Application {
            try {
                result = Operation.add(number1, number2);
            } catch (NumberFormatException e) {
-               result = 0;
+               e.printStackTrace();
            }
-           
            break;
         case 2:
             // soustraction
             try {
                 result = Operation.substract(number1, number2);
             } catch (NumberFormatException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 3:
@@ -89,7 +88,7 @@ public final class Application {
             try {
                 result = Operation.multiply(number1, number2);
             } catch (NumberFormatException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 4:
@@ -101,7 +100,7 @@ public final class Application {
                 try {
                     result = Operation.divide(number1, number2);
                 } catch (NullPointerException e) {
-                    result = 0;
+                    e.printStackTrace();
                 }
                 
             }
@@ -111,7 +110,7 @@ public final class Application {
             try {
                 result = Operation.modulo(number1, number2);
             } catch (NumberFormatException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 6:
@@ -119,7 +118,7 @@ public final class Application {
             try {
                 result = Operation.pourcentage(number1);
             } catch (NullPointerException e) {
-                result = 0;
+                e.printStackTrace();
             }
             break;
         case 7:
