@@ -43,7 +43,7 @@ public final class Application {
      * @return user prompt
      */
     public static String prompt(final String promptMessage) {
-        Scanner scanner = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.println(promptMessage);
         final String userInput = scanner.nextLine();
         scanner.close();
