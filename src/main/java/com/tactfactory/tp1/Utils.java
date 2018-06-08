@@ -12,16 +12,17 @@ public final class Utils {
 	 * Print message in console.
 	 * @param message
 	 */
-    public static void message(final String message)
-    {
+    public static void message(final String message) {
         System.out.print("\r\n" + message);
     }
     public static boolean tryParseInt(String value) {  
-        try {  
+        boolean result = false;
+    	try {  
             Integer.parseInt(value);  
-            return true;  
+            result =  true;  
          } catch (NumberFormatException e) {  
-            return false;  
-         }  
+            result = false;  
+         } 
+        return result;
    }
 }
