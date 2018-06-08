@@ -9,10 +9,13 @@ package com.iia.calcultp;
  */
 public final class Utils {
 
-	private Utils() {
-		super();
-	}
-
+    /**
+     * Constructor
+     */
+    private Utils() {
+        super();
+    }
+    
 	/**
 	 * Print message in console.
 	 * 
@@ -22,14 +25,13 @@ public final class Utils {
 		System.out.print("\r\n" + message);
 	}
 
-	/**
-	 * Essaie de parser une string en int.
-	 * 
-	 * @param value
-	 *            valeur à parser
-	 * @return true si parsable , false si non parsable
-	 */
-	public static boolean tryParseInt(final String value) {
+    /**
+     * Essaie de parser une string en int.
+     * 
+     * @param value valeur à parser
+     * @return true si parsable , false si non parsable
+     */
+    public static boolean tryParseInt(final String value) {
         boolean result = false;
         try {
             Integer.parseInt(value);
