@@ -4,8 +4,6 @@ package com.tactfactory.tp1;
 
 import java.util.Scanner;
 
-import org.joda.time.DateTime;
-
 /**
  * My main Application.
  * @author Thomas
@@ -26,7 +24,7 @@ public final class Application {
        
         showMenu();
         
-        String userInput = prompt("Veuillez saisir une option :");
+        final String userInput = prompt("Veuillez saisir une option :");
         
         if ("q".equals(userInput)) {
             System.out.println("Au revoir!");
@@ -45,10 +43,10 @@ public final class Application {
      * @return user prompt
      */
     public static String prompt(final String promptMessage) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println(promptMessage);
-        String userInput = sc.nextLine();
-        sc.close();
+        final String userInput = scanner.nextLine();
+        scanner.close();
         return userInput;
     }
     /**
