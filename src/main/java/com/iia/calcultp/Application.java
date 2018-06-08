@@ -43,9 +43,8 @@ public final class Application {
      * @return user prompt.
      */
     public static String prompt(final String promptMessage) {
-        final Scanner scanner = new Scanner(System.in);
         System.out.println(promptMessage);
-        return scanner.nextLine().toString();
+        return new Scanner(System.in).nextLine();
     }
     /**
      * Show application menu.
