@@ -98,12 +98,18 @@ public final class SelectOperation {
      * Add two value.
      * @return result of addition.
      */
-    public static int getNumber() {
+   
+	public static int getNumber() {
         String number = "";
         do
         {
             Utils.message("Saisir un nombre : ");
-            number = new Scanner(System.in).nextLine();
+            try {
+            	number = new Scanner(System.in).nextLine();
+			} catch (Exception e) {
+				continue;// TODO: handle exception
+			}
+
         }while(!Utils.tryParseInt(number));
         
         return Integer.parseInt(number);
