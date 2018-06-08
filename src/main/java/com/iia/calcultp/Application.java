@@ -31,10 +31,10 @@ public final class Application {
             System.out.println("Au revoir!");
             System.exit(0);
         } else {
-            if(!Utils.tryParseInt(userInput)) {
-                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
-            } else {
+            if(Utils.tryParseInt(userInput)) {
                 selectOption(userInput);
+            } else {
+                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }
         }
     }
