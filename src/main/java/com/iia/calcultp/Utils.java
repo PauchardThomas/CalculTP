@@ -26,12 +26,12 @@ public final class Utils {
      * @return true si parsable , false si non parsable
      */
     public static boolean tryParseInt(final String value) {  
-        boolean result;
+        boolean result = false;
            try {  
             Integer.parseInt(value);  
             result =  true;  
          } catch (NumberFormatException e) {  
-            result = false;  
+             
          } 
         return result;
    }
