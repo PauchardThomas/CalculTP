@@ -1,10 +1,8 @@
-/* Copyright Pauchard Thomas 07/06/2018 */
+/* Copyright Pauchard Thomas 07/06/20 */
 
 package com.tactfactory.tp1;
 
 import java.util.Scanner;
-
-import org.joda.time.DateTime;
 
 /**
  * My main Application.
@@ -20,42 +18,40 @@ public final class Application {
 
     /**
      * Entry point of application.
-     * @param args Arguments from CLI
+     * @param args Arguments from CLI.
      */
     public static void main(final String[] args) {
        
         showMenu();
         
-        String userInput = prompt("Veuillez saisir une option :");
+        final String userInput = prompt("Veuillez saisir une option :");
         
         if ("q".equals(userInput)) {
             System.out.println("Au revoir!");
             System.exit(0);
-        }else {
-            if(!Utils.tryParseInt(userInput))
-            {
+        } else {
+            if(!Utils.tryParseInt(userInput)) {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
-            }else{
+            } else {
                 selectOption(userInput);
             }
         }
     }
     /**
-     * Get User input string
-     * @param promptMessage prompt description
-     * @return user prompt
+     * Get User input string.
+     * @param promptMessage prompt description.
+     * @return user prompt.
      */
     public static String prompt(final String promptMessage) {
-        Scanner sc = new Scanner(System.in);
+        final Scanner scanner = new Scanner(System.in);
         System.out.println(promptMessage);
-        String userInput = sc.nextLine();
+        final String userInput = scanner.nextLine();
         return userInput;
     }
     /**
-     * Show application menu
+     * Show application menu.
      */
-    public static void showMenu()
-    {
+    public static void showMenu() {
         System.out.print("\r\n*************************************** \r\n");
         System.out.print("* Bienvenue dans votre calculatrice ! * \r\n");
         System.out.print("*************************************** \r\n \r\n");
@@ -70,11 +66,10 @@ public final class Application {
         System.out.print("8- Historique des opérations\r\n");
     }
     /**
-     * Select the option according user prompt
-     * @param userInput
+     * Select the option according user prompt.
+     * @param userInput.
      */
-    public static void selectOption(final String userInput)
-    {
+    public static void selectOption(final String userInput) {
         
         int number1 = getNumber();
         int number2 = getNumber();
@@ -131,8 +126,10 @@ public final class Application {
         }
     }    
     /**
-     * Get number for operation
-     * @return number
+     * Add two value.
+     * @param number1 first value.
+     * @param number2 second value.
+     * @return result of addition.
      */
     public static int getNumber() {
         String number;
