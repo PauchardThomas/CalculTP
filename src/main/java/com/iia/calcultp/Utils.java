@@ -17,7 +17,6 @@ public final class Utils {
 	 * Print message in console.
 	 * 
 	 * @param message
-	 *            message a afficher
 	 */
 	public static void message(final String message) {
 		System.out.print("\r\n" + message);
@@ -31,13 +30,13 @@ public final class Utils {
 	 * @return true si parsable , false si non parsable
 	 */
 	public static boolean tryParseInt(final String value) {
-		boolean result;
-		try {
-			Integer.parseInt(value);
-			result = true;
-		} catch (NumberFormatException e) {
-			result = false;
-		}
-		return result;
+        boolean result = false;
+        try {
+            Integer.parseInt(value);
+            result = true;
+        } catch (NumberFormatException e) {
+            Utils.message(e.getMessage());
+        }
+        return result;
 	}
 }
