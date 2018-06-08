@@ -31,9 +31,8 @@ public final class Application {
         if ("q".equals(userInput)) {
             System.out.println("Au revoir!");
             System.exit(0);
-        }else {
-            if(!Utils.tryParseInt(userInput))
-            {
+        }else{
+            if(!Utils.tryParseInt(userInput)) {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }else{
                 selectOption(userInput);
@@ -55,8 +54,7 @@ public final class Application {
     /**
      * Show application menu
      */
-    public static void showMenu()
-    {
+    public static void showMenu() {
         System.out.print("\r\n*************************************** \r\n");
         System.out.print("* Bienvenue dans votre calculatrice ! * \r\n");
         System.out.print("*************************************** \r\n \r\n");
