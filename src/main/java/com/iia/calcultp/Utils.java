@@ -34,10 +34,10 @@ public final class Utils {
         boolean result;
         try {
             Integer.parseInt(value);
-            result = true;
             } catch (NumberFormatException e) {
                 result = false;
                 }
+        result = true;
         return result;
         }
 }
