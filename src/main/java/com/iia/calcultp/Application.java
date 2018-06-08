@@ -107,16 +107,29 @@ public final class Application {
                 Utils.message("Division par 0 impossible");
                 operationDone = false;
             }else {
-                result = Operation.divide(number1, number2);
+                try {
+                    result = Operation.divide(number1, number2);
+                } catch (NullPointerException e) {
+                    result = 0;
+                }
+                
             }
             break;
         case 5:
             // modulo
-            result = Operation.modulo(number1, number2);
+            try {
+                result = Operation.modulo(number1, number2);
+            } catch (NumberFormatException e) {
+                result = 0;
+            }
             break;
         case 6:
             // pourcentage
-            result = Operation.pourcentage(number1);
+            try {
+                result = Operation.pourcentage(number1);
+            } catch (NullPointerException e) {
+                result = 0;
+            }
             break;
         case 7:
             // sin cos tang
