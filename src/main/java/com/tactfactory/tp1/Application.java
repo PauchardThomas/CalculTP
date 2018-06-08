@@ -70,39 +70,52 @@ public final class Application {
      */
     public static void selectOption(final String userInput) {
         
-        int number1 = getNumber();
-        int number2 = getNumber();
+        int number1;
+        int number2;
         int result = 0;
         boolean operationDone = true;
         
         switch (Integer.parseInt(userInput)) {
         case 1:
             // addition
+            number1 = getNumber();
+            number2 = getNumber();
             result = Operation.add(number1, number2);
             break;
         case 2:
             // soustraction
+            number1 = getNumber();
+            number2 = getNumber();
             result = Operation.substract(number1, number2);
             break;
         case 3:
             //multiplication
+            number1 = getNumber();
+            number2 = getNumber();
             result = Operation.multiply(number1, number2);
             
             break;
         case 4:
             //division
+            number1 = getNumber();
+            number2 = getNumber();
             if(number2 == 0) {
                 Utils.message("Division par 0 impossible");
                 operationDone = false;
             }else {
-                result = Operation.substract(number1, number2);
+                result = Operation.divide(number1, number2);
             }
             break;
         case 5:
             // modulo
+            number1 = getNumber();
+            number2 = getNumber();
+            result = Operation.modulo(number1, number2);
             break;
         case 6:
             // pourcentage
+            number1 = getNumber();
+            result = Operation.pourcentage(number1);
             break;
         case 7:
             // sin cos tang

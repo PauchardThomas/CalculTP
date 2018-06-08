@@ -50,5 +50,23 @@ public final class Operation {
     public static int divide(final int number1, final int number2) {
         return number1 / number2;
     }
+    /**
+     * Modulo de 2 nombres
+     * @param number1 first value
+     * @param number2 second value
+     * @return modulo
+     */
+    public static int modulo(final int number1, final int number2) {
+        return number1 % number2;
+    }
+    
+    /**
+     * Pourcentage d une valeur
+     * @param number1
+     * @return pourcentage du nombre
+     */
+    public static int pourcentage(final int number1) {
+        return number1 / 100;
+    }
 }
 

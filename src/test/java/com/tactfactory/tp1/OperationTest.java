@@ -56,6 +56,19 @@ public class OperationTest {
             Operation.divide(i,j);
     }
     
+    @org.junit.Test
+    public void testModulo() {
+            int i =8 , j=3;
+            
+           int k = Operation.modulo(i,j);
+            Assert.assertEquals(k,2);
+    }
     
-    
+    @org.junit.Test
+    public void testpourcentage() {
+            int i = 80;
+            
+           double k = Operation.pourcentage(i);
+           // Assert.assertEquals(k,0.8);
+    }
 }
