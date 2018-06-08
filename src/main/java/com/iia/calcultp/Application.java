@@ -79,16 +79,28 @@ public final class Application {
         switch (Integer.parseInt(userInput)) {
         case 1:
             // addition
-            result = Operation.add(number1, number2);
-            break;
+           try {
+               result = Operation.add(number1, number2);
+           } catch (NumberFormatException e) {
+               result = 0;
+           }
+           
+           break;
         case 2:
             // soustraction
-            result = Operation.substract(number1, number2);
+            try {
+                result = Operation.substract(number1, number2);
+            } catch (NumberFormatException e) {
+                result = 0;
+            }
             break;
         case 3:
             //multiplication
-            result = Operation.multiply(number1, number2);
-            
+            try {
+                result = Operation.multiply(number1, number2);
+            } catch (NumberFormatException e) {
+                result = 0;
+            }
             break;
         case 4:
             //division
