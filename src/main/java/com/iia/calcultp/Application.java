@@ -12,7 +12,6 @@ import java.util.Scanner;
 public final class Application {
 
 
-    private static Scanner scanner;
 	private Application() {
         super();
     }
@@ -81,7 +80,6 @@ public final class Application {
            try {
                result = Operation.add(number1, number2);
            } catch (NumberFormatException e) {
-               result = 0;
            }
            
            break;
