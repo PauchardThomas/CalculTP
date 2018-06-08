@@ -23,9 +23,9 @@ public final class Utils {
     /**
      * Essaie de parser une string en int.
      * @param value valeur à parser
-     * @return
+     * @return true si parsable , false si non parsable
      */
-    public static boolean tryParseInt(String value) {  
+    public static boolean tryParseInt(final String value) {  
         boolean result = false;
     	try {  
             Integer.parseInt(value);  
