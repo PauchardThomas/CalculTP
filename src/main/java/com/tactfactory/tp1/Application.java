@@ -49,7 +49,6 @@ public final class Application {
         Scanner sc = new Scanner(System.in);
         System.out.println(promptMessage);
         String userInput = sc.nextLine();
-        sc.close();
         return userInput;
     }
     /**
@@ -76,18 +75,34 @@ public final class Application {
      */
     public static void selectOption(final String userInput)
     {
+        
+        int number1 = getNumber();
+        int number2 = getNumber();
+        int result = 0;
+        boolean operationDone = true;
+        
         switch (Integer.parseInt(userInput)) {
         case 1:
             // addition
+            result = Operation.add(number1, number2);
             break;
         case 2:
             // soustraction
+            result = Operation.substract(number1, number2);
             break;
         case 3:
             //multiplication
+            result = Operation.multiply(number1, number2);
+            
             break;
         case 4:
             //division
+            if(number2 == 0) {
+                Utils.message("Division par 0 impossible");
+                operationDone = false;
+            }else {
+                result = Operation.substract(number1, number2);
+            }
             break;
         case 5:
             // modulo
@@ -98,25 +113,34 @@ public final class Application {
         case 7:
             // sin cos tang
             Utils.message("En construction...");
+            operationDone = false;
             break;
         case 8:
             // historique
             Utils.message("En construction....");
+            operationDone = false;
             break;
         default:
             // Choix invalide
             Utils.message("Choix invalide");
+            operationDone = false;
             break;
         } 
-    }
-
+        if(operationDone) {
+            Utils.message("Résultat de l'opération : " + result);
+        }
+    }    
     /**
-     * Add two value.
-     * @param number1 first value
-     * @param number2 second value
-     * @return result of addition
+     * Get number for operation
+     * @return number
      */
-    public static int add(final int number1, final int number2) {
-        return number1 + number2;
+    public static int getNumber() {
+        String number;
+        do
+        {
+            number = prompt("Saisir une nombre");
+        }while(!Utils.tryParseInt(number));
+        
+        return Integer.parseInt(number);
     }
 }
