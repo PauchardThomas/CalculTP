@@ -1,0 +1,109 @@
+apply plugin:'java'
+apply plugin:'eclipse'
+apply plugin: 'pmd'
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+apply plugin: "jacoco"
+apply plugin: 'jdepend'
+
+repositories {
+	jcenter()
+	mavenCentral()
+}
+dependencies {
+	compile 'joda-time:joda-time:2.10'
+	testCompile('junit:junit:4.12')
+}
+
+// pmd
+
+pmd {
+  pmdTest.enabled = false
+  ruleSets = ["java-basic","java-braces","java-clone","java-codesize","java-comments",
+              "java-controversial","java-coupling","java-design","java-empty",
+              "java-finalizers","java-imports","java-naming",
+              "java-optimizations","java-strings","java-unusedcode"]
+  toolVersion = '5.8.1'
+  ignoreFailures = true
+}
+
+tasks.withType(Pmd){
+  reports {
+    xml.enabled true
+    html.enabled true
+  }
+}
+
+// findbugs
+
+findbugs {
+  findbugsTest.enabled = false
+  ignoreFailures = true
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+// checkstyle
+
+checkstyle {
+    checkstyleTest.enabled = false
+    toolVersion '7.8.1'
+    configFile file("config/checkstyle/checkstyle.xml")
+    ignoreFailures = true
+}
+checkstyleMain {
+    source ='src/main/java'
+}
+def gradleExtra="${project.rootDir}/gradle/script"
+def reportDir="${project.buildDir}/reports"
+check.dependsOn 'cpd'
+// jacoco
+
+jacoco {
+    toolVersion = "0.8.1"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+// cpd
+
+task cpd {
+    doLast {
+        def cpdOutputDir = new File("${reportDir}/cpd")
+        cpdOutputDir.mkdirs()
+
+        ant.taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask', classpath: configurations.pmd.asPath)
+
+        ant.cpd(minimumTokenCount: '5', format: 'xml', outputFile: new File(cpdOutputDir, 'cpd.xml')) {
+            fileset(dir: 'src') {
+                include(name: '**/*.java')
+            }
+        }
+    }
+}
+// JDepend
+jdepend {
+    jdependTest.enabled = false
+//   toolVersion = "2.9.1"
+    ignoreFailures = true
+}
+
+tasks.withType(JDepend) {
+    reports {
+        xml.enabled true
+        text.enabled false
+    }
+}
+
+test {
+  ignoreFailures = true
+}
