@@ -80,6 +80,7 @@ public final class Application {
            try {
                result = Operation.add(number1, number2);
            } catch (NumberFormatException e) {
+               result = 0;
            }
            
            break;
