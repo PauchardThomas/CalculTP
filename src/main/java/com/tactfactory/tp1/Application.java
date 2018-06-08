@@ -21,7 +21,6 @@ public final class Application {
      * @param args Arguments from CLI
      */
     public static void main(final String[] args) {
-        System.out.print("Hello W !!");
         final DateTime dateTime = DateTime.now();
         System.out.print(dateTime);
     }
