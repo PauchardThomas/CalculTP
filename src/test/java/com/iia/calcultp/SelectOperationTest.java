@@ -21,11 +21,14 @@ public class SelectOperationTest extends TestCase {
         assertTrue(SelectOperation.selectOptionWithTwoNumbers(4,1,0) == -1);
         //Modulo
         assertTrue(SelectOperation.selectOptionWithTwoNumbers(5,1,1) == 0);
+        //Default
+        assertTrue(SelectOperation.selectOptionWithTwoNumbers(8,1,1) == -1);
+        
     }
     
     @Test
     public void testSwitchOneNumber() {
-        //Pourcentage
+        //Percent
         assertTrue(SelectOperation.selectOption(6, 10) == 0.1);
         //Sinus
         assertTrue(SelectOperation.selectOption(7, 1) == 0.84);
@@ -33,6 +36,10 @@ public class SelectOperationTest extends TestCase {
         assertTrue(SelectOperation.selectOption(8, 1) == 0.54);
         //Tangente
         assertTrue(SelectOperation.selectOption(9, 1) == 1.56);
+        //Default
+        assertTrue(SelectOperation.selectOption(10,1) == -1);
+        //Catch
+        //assertTrue(SelectOperation.selectOption(,1) == -1);
     }
     
 }
