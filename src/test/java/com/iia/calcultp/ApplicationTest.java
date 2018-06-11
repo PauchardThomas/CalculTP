@@ -26,8 +26,10 @@ public class ApplicationTest {
                 + "4- Division\r\n"
                 + "5- Modulo\r\n"
                 + "6- Pourcentage\r\n"
-                + "7- sin cos tang\r\n"
-                + "8- Historique des opérations\r\n", os.toString());
+                + "7- sin\r\n"
+                + "8- cos\r\n"
+                + "9- tang\r\n"
+                + "10- Historique des opérations\r\n", os.toString());
     }
     
     @org.junit.Test
