@@ -64,6 +64,7 @@ public class ApplicationTest {
         
         Assert.assertEquals(result,5,0.01);
     }
+    
     @org.junit.Test
     public void testExecuteOneNumbersOperation() {
         
@@ -72,5 +73,14 @@ public class ApplicationTest {
        double result = Application.executeOneNumberOperation(userChoice,number1);
         
         Assert.assertEquals(result,0.2,0.01);
+    }
+    
+    @org.junit.Test
+    public void testGetNumber() {
+        
+       String userPromptNumber = "6";
+       double result = Application.getNumber(userPromptNumber);
+        
+        Assert.assertEquals(result,6,0.01);
     }
 }
