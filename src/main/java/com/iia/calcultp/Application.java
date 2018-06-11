@@ -60,25 +60,7 @@ public final class Application {
         showSubMenu();
         manageSubMenu(userOpeChoice, prompt());
     }
-
-    /**
-     * Execute operation with 2 numbers.
-     * @param userInput user operation chose
-     * @return operation result
-     */
-    /*public static double executeTwoNumbersOperation(final int userInput, final double number1, final double number2) {
-        return  SelectOperation.selectOptionWithTwoNumbers(userInput, number1, number2);
-    }*/
     
-    /**
-     * Execute operation with one number.
-     * @param userInput user operation chose
-     * @return operation result
-     */
-   /*public static double executeOneNumberOperation(final int userInput, final double number1) {
-        return SelectOperation.selectOption(userInput, number1);
-    }*/
-
     /**
      * Display operation result.
      * @param result
