@@ -74,10 +74,4 @@ public class ApplicationTest {
         
         Assert.assertEquals(result,0.2,0.01);
     }
-    
-    @Test
-    public void testExecuteGetNummber() {
-        double result = Application.getNumber();
-        Assert.assertEquals(result,1,0.01);
-    }
 }
