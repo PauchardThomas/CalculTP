@@ -66,7 +66,6 @@ public final class SelectOperation {
      */
     public static double selectOption(final int userInput, final double number1) {
 
-        try {
             switch (userInput) {
             case 6:
                 // Percent
@@ -89,10 +88,7 @@ public final class SelectOperation {
                 result = -1;
                 Utils.message("Choix invalide");
                 break;
-            } 
-        } catch (Exception e) {
-            Utils.message(e.getMessage());
-        }
+            }
         return result;
     }
 }
