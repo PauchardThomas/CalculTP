@@ -39,6 +39,7 @@ public final class Utils {
             result = true;
         } catch (NumberFormatException e) {
             Utils.message(e.getMessage());
+            result = false;
         }
         return result;
     }

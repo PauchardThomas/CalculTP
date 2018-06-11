@@ -12,7 +12,7 @@ import java.util.Scanner;
 public final class Application {
 
     /** Max menu number for an operation with 2 numbers. */
-    private static final int MAX_TWO_NUMBER_OPERATION = 5;
+    private static final int MAX_TWO_NUMBER_OPE = 5;
     /**User input number.*/
     private static String number = "";
     /**User input first number.*/
@@ -42,15 +42,15 @@ public final class Application {
      * Manage operation .
      * @param userOperationChoice user operation choice
      */
-    private static void manageOperation(final int userOperationChoice) {
-        if (userOperationChoice <= MAX_TWO_NUMBER_OPERATION) {
-            result =  executeTwoNumbersOperation(userOperationChoice);
+    private static void manageOperation(final int userOpeChoice) {
+        if (userOpeChoice <= MAX_TWO_NUMBER_OPE) {
+            result =  executeTwoNumbersOperation(userOpeChoice);
          } else {
-            result = executeOneNumberOperation(userOperationChoice);
+            result = executeOneNumberOperation(userOpeChoice);
          }
         displayResultOperation(result);
         showSubMenu();
-        manageSubMenu(userOperationChoice);
+        manageSubMenu(userOpeChoice);
     }
 
     /**
