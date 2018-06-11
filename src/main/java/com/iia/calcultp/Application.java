@@ -12,7 +12,7 @@ import java.util.Scanner;
 public final class Application {
 
 
-	private Application() {
+    private Application() {
         super();
     }
 
@@ -28,10 +28,10 @@ public final class Application {
         final String userInput = new Scanner(System.in).nextLine();
         
         if ("q".equals(userInput)) {
-            System.out.println("Au revoir!");
+            System.out.print("Au revoir!");
             System.exit(0);
         } else {
-            if(Utils.tryParseInt(userInput)) {
+            if (Utils.tryParseInt(userInput)) {
                 //selectOption(userInput);
                 SelectOperation.selectOption(userInput);
             } else {
