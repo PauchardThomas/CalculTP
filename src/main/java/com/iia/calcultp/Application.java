@@ -67,9 +67,9 @@ public final class Application {
      */
     public static void displayResultOperation(final double result) {
         if (result == -1) {
-            Utils.message("Pas de r�sultat");
+            Utils.message("Pas de résultat");
         } else {
-            Utils.message("resultat de l'op�ration : " + result); 
+            Utils.message("resultat de l'opération : " + result); 
         }
     }
     
@@ -98,7 +98,7 @@ public final class Application {
         System.out.print("7- sin\r\n");
         System.out.print("8- cos\r\n");
         System.out.print("9- tang\r\n");
-        System.out.print("10- Historique des op�rations\r\n");
+        System.out.print("10- Historique des opérations\r\n");
     }
     
     /**
@@ -123,7 +123,7 @@ public final class Application {
      */
     public static void showSubMenu() {
         System.out.print("\r\n0- Retour au menu \r\n");
-        System.out.print("1- Nouvelle op�ration\r\n");
+        System.out.print("1- Nouvelle opération\r\n");
     }
     
     /**

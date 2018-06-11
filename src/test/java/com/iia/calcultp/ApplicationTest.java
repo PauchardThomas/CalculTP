@@ -32,7 +32,7 @@ public class ApplicationTest {
                 + "7- sin\r\n"
                 + "8- cos\r\n"
                 + "9- tang\r\n"
-                + "10- Historique des opérations\r\n", os.toString());
+                + "10- Historique des opÃ©rations\r\n", os.toString());
     }
     
     @org.junit.Test
@@ -44,7 +44,7 @@ public class ApplicationTest {
 
         Application.showSubMenu();
         Assert.assertEquals("\r\n0- Retour au menu \r\n"
-                + "1- Nouvelle opération\r\n", os.toString());
+                + "1- Nouvelle opÃ©ration\r\n", os.toString());
     }
     
     @org.junit.Test
@@ -58,7 +58,7 @@ public class ApplicationTest {
         
         Application.displayResultOperation(result);
         
-        Assert.assertEquals("\r\nresultat de l'opération : " + result, os.toString());
+        Assert.assertEquals("\r\nresultat de l'opÃ©ration : " + result, os.toString());
     }
     
   /*  @org.junit.Test
