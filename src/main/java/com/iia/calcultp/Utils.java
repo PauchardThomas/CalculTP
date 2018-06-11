@@ -9,6 +9,8 @@ package com.iia.calcultp;
  */
 public final class Utils {
 
+    /**Result if string can be parsed in int  */
+    private static boolean result;
     /**
      * Constructor.
      */
@@ -32,7 +34,6 @@ public final class Utils {
      * @return true si parsable , false si non parsable
      */
     public static boolean tryParseInt(final String value) {
-        boolean result = false;
         try {
             Integer.parseInt(value);
             result = true;
