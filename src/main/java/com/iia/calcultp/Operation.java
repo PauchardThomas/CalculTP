@@ -7,7 +7,7 @@ package com.iia.calcultp;
  */
 public final class Operation {
     
-    /** Operation result */
+    /** Operation result. */
     private static double result;
     
     /**
