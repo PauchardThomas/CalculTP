@@ -7,6 +7,9 @@ package com.iia.calcultp;
  */
 public final class Operation {
     
+    /** Operation result */
+    private static double result;
+    
     /**
      * Constructor.
      */
@@ -51,7 +54,13 @@ public final class Operation {
      * @return result of divide.
      */
     public static double divide(final double number1, final double number2) {
-        return number1 / number2;
+        
+        try {
+            result = number1 / number2;
+        } catch (java.lang.ArithmeticException e) {
+            Utils.message(e.getMessage());
+        }
+        return result;
     }
     /**
      * Modulo de 2 nombres.

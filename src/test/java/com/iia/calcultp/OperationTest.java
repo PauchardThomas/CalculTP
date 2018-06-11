@@ -51,7 +51,7 @@ public class OperationTest {
         Assert.assertEquals(k,6,0.01);
     }
 
-    /*@org.junit.Test(expected=java.lang.ArithmeticException.class)
+    /*@org.junit.Test(expected=java.lang.AssertionError.class)
     public void testDivideByZero() {
         double i =12 , j=0;
 

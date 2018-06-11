@@ -19,7 +19,7 @@ public final class Application {
     private static double number1;
     /**User input second number.*/
     private static double number2;
-    /** Operation result*/
+    /** Operation result. */
     private static double result;
 
     /**
@@ -41,18 +41,17 @@ public final class Application {
         final String userInput = new Scanner(System.in, "UTF-8").nextLine();
         
         if ("q".equals(userInput)) {
-            System.out.print("Au revoir!");
-            System.exit(0);
+            exitApp();
         } else {
             if (Utils.tryParseDouble(userInput)) {
                 final int userNumber = Integer.parseInt(userInput);
                 if (userNumber <= MAX_NUMBER_MENU) {
                    number1 = getNumber();
                    number2 = getNumber();
-                   result =  SelectOperation.selectOptionWithTwoNumbers(userInput,number1,number2);
+                   result =  SelectOperation.selectOptionWithTwoNumbers(userInput, number1, number2);
                 } else {
-                    number1 = getNumber();
-                   result = SelectOperation.selectOption(userInput,number1);
+                   number1 = getNumber();
+                   result = SelectOperation.selectOption(userInput, number1);
                 }
                 displayResultOperation(result);
             } else {
@@ -61,13 +60,21 @@ public final class Application {
         }
     }
     /**
-     * Affiche le résultat de l'opération
+     * Affiche le résultat de l'opération.
      * @param result
      */
     public static void displayResultOperation(final double result) {
         if (result != -1) {
            Utils.message("resultat de l'opération :" + result); 
         }
+    }
+    
+    /**
+     * Exit the calculator.
+     */
+    public static void exitApp() {
+        System.out.print("Au revoir!");
+        System.exit(0);
     }
     
     /**
@@ -86,6 +93,14 @@ public final class Application {
         System.out.print("6- Pourcentage\r\n");
         System.out.print("7- sin cos tang\r\n");
         System.out.print("8- Historique des opérations\r\n");
+    }
+    
+    /**
+     * Show submenu.
+     */
+    public static void showSubMenu() {
+        System.out.print("0- Retour au menu \r\n");
+        System.out.print("1- Nouvelle opération\r\n");
     }
     
     /**
