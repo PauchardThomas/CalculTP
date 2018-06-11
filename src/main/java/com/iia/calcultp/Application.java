@@ -45,14 +45,14 @@ public final class Application {
     private static void manageOperation(final int userOpeChoice) {
         if (userOpeChoice <= MAX_TWO_NB_OPE) {
             Utils.message("Saisir un nombre : ");
-            number1 = getNumber(prompt());
+            number1 = getNumber();
             Utils.message("Saisir un nombre : ");
-            number2 = getNumber(prompt());
+            number2 = getNumber();
             //result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
-            SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
+            result = SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
          } else {
             Utils.message("Saisir un nombre : ");
-            number1 = getNumber(prompt());
+            number1 = getNumber();
             //result = executeOneNumberOperation(userOpeChoice, number1);
             result = SelectOperation.selectOption(userOpeChoice, number1);
          }
@@ -85,9 +85,9 @@ public final class Application {
      */
     public static void displayResultOperation(final double result) {
         if (result == -1) {
-            Utils.message("Pas de résultat");
+            Utils.message("Pas de rï¿½sultat");
         } else {
-            Utils.message("resultat de l'opération : " + result); 
+            Utils.message("resultat de l'opï¿½ration : " + result); 
         }
     }
     
@@ -116,7 +116,7 @@ public final class Application {
         System.out.print("7- sin\r\n");
         System.out.print("8- cos\r\n");
         System.out.print("9- tang\r\n");
-        System.out.print("10- Historique des opérations\r\n");
+        System.out.print("10- Historique des opï¿½rations\r\n");
     }
     
     /**
@@ -141,7 +141,7 @@ public final class Application {
      */
     public static void showSubMenu() {
         System.out.print("\r\n0- Retour au menu \r\n");
-        System.out.print("1- Nouvelle opération\r\n");
+        System.out.print("1- Nouvelle opï¿½ration\r\n");
     }
     
     /**
@@ -173,9 +173,9 @@ public final class Application {
      * Get user prompt number.
      * @return user prompt number
      */
-    public static double getNumber(final String userPrompt) {
+    public static double getNumber() {
         do {
-           number = userPrompt;
+           number = prompt();
         }while(!Utils.tryParseDouble(number));
 
         return Double.parseDouble(number);

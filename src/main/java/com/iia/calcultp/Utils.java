@@ -30,7 +30,7 @@ public final class Utils {
     /**
      * Essaie de parser une string en double.
      * 
-     * @param value valeur à parser
+     * @param value valeur ï¿½ parser
      * @return true si parsable , false si non parsable
      */
     public static boolean tryParseDouble(final String value) {
@@ -38,7 +38,7 @@ public final class Utils {
             Double.parseDouble(value);
             result = true;
         } catch (NumberFormatException e) {
-            Utils.message(e.getMessage());
+            Utils.message("La valeur " + value + " est incorrecte. Veuillez insÃ©rer une valeur valide : ");
             result = false;
         }
         return result;
