@@ -11,7 +11,12 @@ import java.util.Scanner;
  */
 public final class Application {
 
+    /** Max menu number for an operation with 2 numbers. */
+    private static final int MAX_NUMBER_MENU = 5;
 
+    /**
+     * Constructor.
+     */
     private Application() {
         super();
     }
@@ -24,28 +29,24 @@ public final class Application {
        
         showMenu();
         
-        final String userInput = prompt("Veuillez saisir une option :");
+        Utils.message("Veuillez saisir une option : ");
+        final String userInput = new Scanner(System.in, "UTF-8").nextLine();
         
         if ("q".equals(userInput)) {
-            System.out.println("Au revoir!");
+            System.out.print("Au revoir!");
             System.exit(0);
         } else {
-            if(!Utils.tryParseInt(userInput)) {
-                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
+            if (Utils.tryParseInt(userInput)) {
+                final int userNumber = Integer.parseInt(userInput);
+                if (userNumber <= MAX_NUMBER_MENU) {
+                    SelectOperation.selectOptionWithTwoNumbers(userInput);
+                } else {
+                    SelectOperation.selectOption(userInput);
+                }
             } else {
-                selectOption(userInput);
+                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }
         }
-    }
-    /**
-     * Get User input string.
-     * @param promptMessage prompt description.
-     * @return user prompt.
-     */
-    public static String prompt(final String promptMessage) {
-        final Scanner scanner = new Scanner(System.in);
-        System.out.println(promptMessage);
-        return scanner.nextLine().toString();
     }
     /**
      * Show application menu.
@@ -64,79 +65,5 @@ public final class Application {
         System.out.print("7- sin cos tang\r\n");
         System.out.print("8- Historique des opérations\r\n");
     }
-    /**
-     * Select the option according user prompt.
-     * @param userInput.
-     */
-    public static void selectOption(final String userInput) {
-        
-        int number1 = getNumber();
-        int number2 = getNumber();
-        int result = 0;
-        boolean operationDone = true;
-        
-        switch (Integer.parseInt(userInput)) {
-        case 1:
-            // addition
-            result = Operation.add(number1, number2);
-            break;
-        case 2:
-            // soustraction
-            result = Operation.substract(number1, number2);
-            break;
-        case 3:
-            //multiplication
-            result = Operation.multiply(number1, number2);
-            
-            break;
-        case 4:
-            //division
-            if(number2 == 0) {
-                Utils.message("Division par 0 impossible");
-                operationDone = false;
-            }else {
-                result = Operation.divide(number1, number2);
-            }
-            break;
-        case 5:
-            // modulo
-            result = Operation.modulo(number1, number2);
-            break;
-        case 6:
-            // pourcentage
-            result = Operation.pourcentage(number1);
-            break;
-        case 7:
-            // sin cos tang
-            Utils.message("En construction...");
-            operationDone = false;
-            break;
-        case 8:
-            // historique
-            Utils.message("En construction....");
-            operationDone = false;
-            break;
-        default:
-            // Choix invalide
-            Utils.message("Choix invalide");
-            operationDone = false;
-            break;
-        } 
-        if(operationDone) {
-            Utils.message("Résultat de l'opération : " + result);
-        }
-    }    
-    /**
-     * Add two value.
-     * @return result of addition.
-     */
-    public static int getNumber() {
-        String number;
-        do
-        {
-            number = prompt("Saisir une nombre");
-        }while(!Utils.tryParseInt(number));
-        
-        return Integer.parseInt(number);
-    }
+    
 }
