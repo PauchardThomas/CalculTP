@@ -23,10 +23,11 @@ public final class SelectOperation {
      * Select option from menu.
      * @param userInput input filed user
      */
-    public static double selectOptionWithTwoNumbers(final String userInput,final double number1, final double number2) {
+    public static double selectOptionWithTwoNumbers(final int userInput, 
+            final double number1, final double number2) {
 
         try {
-            switch (Integer.parseInt(userInput)) {
+            switch (userInput) {
             case 1:
                 // addition
                 result = Operation.add(number1, number2);
@@ -67,17 +68,13 @@ public final class SelectOperation {
      * Select option from menu.
      * @param userInput
      */
-    public static double selectOption(final String userInput, final double number1) {
+    public static double selectOption(final int userInput, final double number1) {
 
         try {
-            switch (Integer.parseInt(userInput)) {
+            switch (userInput) {
             case 6:
-                // pourcentage
-                //try {
+            // pourcentage
                 result = Operation.pourcentage(number1);
-                //} catch (NullPointerException e) {
-                    //Utils.message(e.getMessage());
-                //}
                 break;
             case 7:
                 // sin
