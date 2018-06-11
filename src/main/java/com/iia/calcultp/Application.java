@@ -177,7 +177,7 @@ public final class Application {
         return Double.parseDouble(number);
     }
     /**
-     * User prompt
+     * User prompt.
      * @return user prompt
      */
     public static String prompt() {
