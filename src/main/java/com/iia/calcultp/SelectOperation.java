@@ -95,7 +95,7 @@ public final class SelectOperation {
         }
     }    
     /**
-     * Get user prompt number
+     * Get user prompt number.
      * @return user prompt number
      */
    
@@ -104,7 +104,7 @@ public final class SelectOperation {
         Utils.message("Saisir un nombre : ");
         do {
             try {
-                number = new Scanner(System.in,"UTF-8").nextLine();
+                number = new Scanner(System.in, "UTF-8").nextLine();
             } catch (Exception e) {
                 Utils.message(e.getMessage());
             }
