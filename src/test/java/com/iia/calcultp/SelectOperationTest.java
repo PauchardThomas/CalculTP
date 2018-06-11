@@ -21,6 +21,8 @@ public class SelectOperationTest extends TestCase {
         assertTrue(SelectOperation.selectOptionWithTwoNumbers(4,1,0) == -1);
         //Modulo
         assertTrue(SelectOperation.selectOptionWithTwoNumbers(5,1,1) == 0);
+        //Default
+        assertTrue(SelectOperation.selectOptionWithTwoNumbers(8,1,1) == -1);
     }
     
     @Test
@@ -33,6 +35,8 @@ public class SelectOperationTest extends TestCase {
         assertTrue(SelectOperation.selectOption(8, 1) == 0.54);
         //Tangente
         assertTrue(SelectOperation.selectOption(9, 1) == 1.56);
+      //Default
+        assertTrue(SelectOperation.selectOptionWithTwoNumbers(10,1,1) == -1);
     }
     
 }
