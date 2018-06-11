@@ -20,7 +20,7 @@ public final class Operation {
      * @param number2 second value
      * @return result of addition
      */
-    public static int add(final int number1, final int number2) {
+    public static double add(final double number1, final double number2) {
         return number1 + number2;
     }
         
@@ -30,7 +30,7 @@ public final class Operation {
      * @param number2 second value.
      * @return result of substract.
      */
-    public static int substract(final int number1, final int number2) {
+    public static double substract(final double number1, final double number2) {
         return number1 - number2;
     }
     
@@ -40,7 +40,7 @@ public final class Operation {
      * @param number2 second value
      * @return result of muliply
      */
-    public static int multiply(final int number1, final int number2) {
+    public static double multiply(final double number1, final double number2) {
         return number1 * number2;
     }
     
@@ -50,7 +50,7 @@ public final class Operation {
      * @param number2 second value.
      * @return result of divide.
      */
-    public static int divide(final int number1, final int number2) {
+    public static double divide(final double number1, final double number2) {
         return number1 / number2;
     }
     /**
@@ -59,7 +59,7 @@ public final class Operation {
      * @param number2 second value.
      * @return modulo.
      */
-    public static int modulo(final int number1, final int number2) {
+    public static double modulo(final double number1, final double number2) {
         return number1 % number2;
     }
     

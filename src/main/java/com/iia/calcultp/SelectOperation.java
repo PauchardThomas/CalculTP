@@ -16,7 +16,7 @@ public final class SelectOperation {
     /**User input second number.*/
     private static int number2;
     /**Operation result.*/
-    private static int result;
+    private static double result;
     /**Operation double result.*/
     private static double doubleResult;
     /**Check if operation is done.*/
