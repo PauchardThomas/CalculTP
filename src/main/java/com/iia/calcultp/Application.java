@@ -35,7 +35,7 @@ public final class Application {
      */
     public static void main(final String[] args) {
         showMenu();
-        manageMenu();
+        manageMenu(prompt());
     }
     
     /**
@@ -44,16 +44,19 @@ public final class Application {
      */
     private static void manageOperation(final int userOpeChoice) {
         if (userOpeChoice <= MAX_TWO_NB_OPE) {
-            number1 = getNumber();
-            number2 = getNumber();
+            Utils.message("Saisir un nombre : ");
+            number1 = getNumber(prompt());
+            Utils.message("Saisir un nombre : ");
+            number2 = getNumber(prompt());
             result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
          } else {
-            number1 = getNumber();
+            Utils.message("Saisir un nombre : ");
+            number1 = getNumber(prompt());
             result = executeOneNumberOperation(userOpeChoice, number1);
          }
         displayResultOperation(result);
         showSubMenu();
-        manageSubMenu(userOpeChoice);
+        manageSubMenu(userOpeChoice, prompt());
     }
 
     /**
@@ -117,10 +120,7 @@ public final class Application {
     /**
      * Manage menu.
      */
-    private static void manageMenu() {
-        Utils.message("Veuillez saisir une option : ");
-        final String userInput = new Scanner(System.in, "UTF-8").nextLine();
-        
+    private static void manageMenu(final String userInput) {        
         if ("q".equals(userInput)) {
             exitApp();
         } else {
@@ -129,7 +129,7 @@ public final class Application {
                 manageOperation(userNumber);
             } else {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
-                manageMenu();
+                manageMenu(prompt());
             }
         }
     }
@@ -146,14 +146,13 @@ public final class Application {
      * Manage submenu.
      * @param currentOperation currentOperation
      */
-    private static void manageSubMenu(final int currentOperation) {
-        final String userInput = new Scanner(System.in, "UTF-8").nextLine();
+    private static void manageSubMenu(final int currentOperation, final String userInput) {
         if (Utils.tryParseDouble(userInput)) {
             final int userSubMenuChoice = Integer.parseInt(userInput);
             switch (userSubMenuChoice) {
             case 0:
                 showMenu();
-                manageMenu();
+                manageMenu(prompt());
                 break;
             case 1:
                 manageOperation(currentOperation);
@@ -164,7 +163,7 @@ public final class Application {
         } else {
             Utils.message("Veuillez saisir une valeur entre 0 et 1");
             System.lineSeparator();
-            manageSubMenu(currentOperation);
+            manageSubMenu(currentOperation, prompt());
         }
     }
     
@@ -172,17 +171,19 @@ public final class Application {
      * Get user prompt number.
      * @return user prompt number
      */
-    public static double getNumber() {
-        Utils.message("Saisir un nombre : ");
-        final Scanner scannerInputUser = new Scanner(System.in, "UTF-8");
+    public static double getNumber(final String userPrompt) {
         do {
-            try {
-                number = scannerInputUser.nextLine();
-            } catch (Exception e) {
-                Utils.message(e.getMessage());
-            }
+           number = userPrompt;
         }while(!Utils.tryParseDouble(number));
 
         return Double.parseDouble(number);
+    }
+    /**
+     * User prompt.
+     * @return user prompt
+     */
+    public static String prompt() {
+        final Scanner scannerInputUser = new Scanner(System.in, "UTF-8");
+        return scannerInputUser.nextLine();
     }
 }
