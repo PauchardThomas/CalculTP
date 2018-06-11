@@ -22,10 +22,10 @@ public final class Operation {
     }
         
      /**
-     * Substract two value .
-     * @param number1 first value 
-     * @param number2 second value
-     * @return result of substract
+     * Substract two value.
+     * @param number1 first value. 
+     * @param number2 second value.
+     * @return result of substract.
      */
     public static int substract(final int number1, final int number2) {
         return number1 - number2;
@@ -43,18 +43,18 @@ public final class Operation {
     
     /**
      * Divide two value.
-     * @param number1 first value
-     * @param number2 second value
-     * @return result of divide
+     * @param number1 first value.
+     * @param number2 second value.
+     * @return result of divide.
      */
     public static int divide(final int number1, final int number2) {
         return number1 / number2;
     }
     /**
      * Modulo de 2 nombres.
-     * @param number1 first value
-     * @param number2 second value
-     * @return modulo
+     * @param number1 first value.
+     * @param number2 second value.
+     * @return modulo.
      */
     public static int modulo(final int number1, final int number2) {
         return number1 % number2;
@@ -62,8 +62,8 @@ public final class Operation {
     
     /**
      * Pourcentage d une valeur.
-     * @param number1
-     * @return pourcentage du nombre
+     * @param number1.
+     * @return pourcentage du nombre.
      */
     public static int pourcentage(final int number1) {
         return number1 / 100;
