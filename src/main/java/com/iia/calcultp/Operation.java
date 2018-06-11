@@ -7,9 +7,6 @@ package com.iia.calcultp;
  */
 public final class Operation {
     
-    /** Operation result. */
-    private static double result;
-    
     /**
      * Constructor.
      */
@@ -56,10 +53,9 @@ public final class Operation {
     public static double divide(final double number1, final double number2) {
         if (number2 == 0) {
             Utils.message("Impossible de diviser par 0");
-        } else {
-            result = number1 / number2;
+            throw new ArithmeticException("Le dénominateur ne peut pas être égal à 0");
         }
-        return result;
+        return number1 / number2;
     }
     /**
      * Modulo de 2 nombres.
