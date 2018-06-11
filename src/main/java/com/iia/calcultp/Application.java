@@ -75,12 +75,14 @@ public final class Application {
     }
 
     /**
-     * Display operation result
+     * Display operation result.
      * @param result
      */
     public static void displayResultOperation(final double result) {
         if (result != -1) {
            Utils.message("resultat de l'opération : " + result); 
+        } else {
+            Utils.message("Pas de résultat");
         }
     }
     
