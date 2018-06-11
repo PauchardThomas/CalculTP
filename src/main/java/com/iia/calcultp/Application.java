@@ -113,8 +113,10 @@ public final class Application {
         System.out.print("4- Division\r\n");
         System.out.print("5- Modulo\r\n");
         System.out.print("6- Pourcentage\r\n");
-        System.out.print("7- sin cos tang\r\n");
-        System.out.print("8- Historique des opérations\r\n");
+        System.out.print("7- sin\r\n");
+        System.out.print("8- cos\r\n");
+        System.out.print("9- tang\r\n");
+        System.out.print("10- Historique des opérations\r\n");
     }
     
     /**
