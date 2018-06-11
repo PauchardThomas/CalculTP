@@ -16,6 +16,9 @@ public final class Utils {
         super();
     }
 
+    /**Boolean result for tryParseInt.*/
+    private static boolean result = false;
+    
     /**
      * Print message in console.
      * 
@@ -32,7 +35,6 @@ public final class Utils {
      * @return true si parsable , false si non parsable
      */
     public static boolean tryParseInt(final String value) {
-        boolean result = false;
         try {
             Integer.parseInt(value);
             result = true;
