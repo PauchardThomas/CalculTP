@@ -158,6 +158,9 @@ public final class Application {
     public static double getNumber() {
         do {
            number = prompt();
+           if (number.contains(",")){
+               number = number.replaceAll(",", ".");
+           }
         }while(!Utils.tryParseDouble(number));
 
         return Double.parseDouble(number);
