@@ -9,6 +9,9 @@ import org.junit.Test;
 
 public class ApplicationTest {
 
+    /**
+     * Test to see Menu
+     */
     @org.junit.Test
     public void testShowmenu() {
         
