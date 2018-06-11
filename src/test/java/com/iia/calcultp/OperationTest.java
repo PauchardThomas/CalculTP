@@ -73,4 +73,12 @@ public class OperationTest {
         double k = Operation.pourcentage(i);
         Assert.assertEquals(k,0.8,0.01);
     }
+    
+    @org.junit.Test
+    public void testSinus() {
+        double i = 1;
+
+        double k = Operation.sinus(i);
+        Assert.assertEquals(k,0.84,0.01);
+    }
 }

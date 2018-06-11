@@ -69,28 +69,36 @@ public final class SelectOperation {
      */
     public static double selectOption(final String userInput, final double number1) {
 
-        switch (Integer.parseInt(userInput)) {
-        case 6:
-            // pourcentage
-            try {
+        try {
+            switch (Integer.parseInt(userInput)) {
+            case 6:
+                // pourcentage
+                //try {
                 result = Operation.pourcentage(number1);
-            } catch (NullPointerException e) {
-                Utils.message(e.getMessage());
-            }
-            break;
-        case 7:
-            // sin cos tang
-            Utils.message("En construction...");
-            break;
-        case 8:
-            // historique
-            Utils.message("En construction....");
-            break;
-        default:
-            // Choix invalide
-            Utils.message("Choix invalide");
-            break;
-        } 
+                //} catch (NullPointerException e) {
+                    //Utils.message(e.getMessage());
+                //}
+                break;
+            case 7:
+                // sin
+                result = Math.round(Operation.sinus(number1)*100.0)/100.0;
+                break;
+            case 8:
+                // cos
+                result = Math.round(Operation.cosinus(number1)*100.0)/100.0;
+                break;
+            case 9:
+                // tan
+                result = Math.round(Operation.tangente(number1)*100.0)/100.0;
+                break;
+            default:
+                // Choix invalide
+                Utils.message("Choix invalide");
+                break;
+            } 
+        } catch (Exception e) {
+            Utils.message(e.getMessage());
+        }
         return result;
     }
 }

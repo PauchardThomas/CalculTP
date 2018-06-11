@@ -71,5 +71,30 @@ public final class Operation {
     public static double pourcentage(final double number1) {
         return number1 / 100;
     }
+    
+    /**
+     * Sinus of result.
+     * @param number1.
+     * @return sinus du nombre.
+     */
+    public static double sinus(final double number1) {
+        return Math.sin(number1);
+    }
+    /**
+     * Cosinus of result.
+     * @param number1
+     * @return
+     */
+    public static double cosinus(final double number1) {
+        return Math.cos(number1);
+    }
+    /**
+     * Tangente result.
+     * @param number1
+     * @return
+     */
+    public static double tangente(final double number1) {
+        return Math.tan(number1);
+    }
 }
 
