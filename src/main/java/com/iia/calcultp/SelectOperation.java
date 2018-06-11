@@ -55,7 +55,8 @@ public final class SelectOperation {
                 break;
             default:
                 // Choix invalide
-                Utils.message("Choix invalide");
+                result = -1;
+                //Utils.message("Choix invalide");
                 break;
             } 
         } catch (Exception e) {
