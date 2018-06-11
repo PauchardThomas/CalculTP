@@ -35,7 +35,7 @@ public final class Operation {
     }
     
     /**
-     * Multiplication two value.
+     * Multiply two value.
      * @param number1 first value
      * @param number2 second value
      * @return result of muliply
@@ -58,7 +58,7 @@ public final class Operation {
         return number1 / number2;
     }
     /**
-     * Modulo de 2 nombres.
+     * Modulo 2 numbers.
      * @param number1 first value.
      * @param number2 second value.
      * @return modulo.
@@ -68,16 +68,16 @@ public final class Operation {
     }
     
     /**
-     * Pourcentage d une valeur.
+     * Percentage.
      * @param number1.
-     * @return pourcentage du nombre.
+     * @return number percentage.
      */
     public static double pourcentage(final double number1) {
         return number1 / 100;
     }
     
     /**
-     * Sinus of result.
+     * Calcul sinus.
      * @param number1.
      * @return sinus du nombre.
      */
@@ -85,7 +85,7 @@ public final class Operation {
         return Math.sin(number1);
     }
     /**
-     * Cosinus of result.
+     * Calcul cosine.
      * @param number1
      * @return
      */
@@ -93,7 +93,7 @@ public final class Operation {
         return Math.cos(number1);
     }
     /**
-     * Tangente result.
+     * Calcul tangent.
      * @param number1
      * @return
      */

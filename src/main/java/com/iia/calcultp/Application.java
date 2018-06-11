@@ -48,11 +48,13 @@ public final class Application {
             number1 = getNumber(prompt());
             Utils.message("Saisir un nombre : ");
             number2 = getNumber(prompt());
-            result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
+            //result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
+            SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
          } else {
             Utils.message("Saisir un nombre : ");
             number1 = getNumber(prompt());
-            result = executeOneNumberOperation(userOpeChoice, number1);
+            //result = executeOneNumberOperation(userOpeChoice, number1);
+            result = SelectOperation.selectOption(userOpeChoice, number1);
          }
         displayResultOperation(result);
         showSubMenu();
@@ -64,18 +66,18 @@ public final class Application {
      * @param userInput user operation chose
      * @return operation result
      */
-    public static double executeTwoNumbersOperation(final int userInput, final double number1, final double number2) {
+    /*public static double executeTwoNumbersOperation(final int userInput, final double number1, final double number2) {
         return  SelectOperation.selectOptionWithTwoNumbers(userInput, number1, number2);
-    }
+    }*/
     
     /**
      * Execute operation with one number.
      * @param userInput user operation chose
      * @return operation result
      */
-    public static double executeOneNumberOperation(final int userInput, final double number1) {
+   /*public static double executeOneNumberOperation(final int userInput, final double number1) {
         return SelectOperation.selectOption(userInput, number1);
-    }
+    }*/
 
     /**
      * Display operation result.
