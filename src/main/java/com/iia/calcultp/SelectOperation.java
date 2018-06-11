@@ -126,9 +126,10 @@ public final class SelectOperation {
    
     public static int getNumber() {
         Utils.message("Saisir un nombre : ");
+        final Scanner scannerInputUser = new Scanner(System.in, "UTF-8");
         do {
             try {
-                number = new Scanner(System.in, "UTF-8").nextLine();
+                number = scannerInputUser.nextLine();
             } catch (Exception e) {
                 Utils.message(e.getMessage());
             }
