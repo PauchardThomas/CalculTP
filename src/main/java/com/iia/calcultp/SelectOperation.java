@@ -78,15 +78,15 @@ public final class SelectOperation {
                 break;
             case 7:
                 // sin
-                result = Math.round(Operation.sinus(number1)*100.0)/100.0;
+                result = Math.round(Operation.sinus(number1) * 100.0) / 100.0;
                 break;
             case 8:
                 // cos
-                result = Math.round(Operation.cosinus(number1)*100.0)/100.0;
+                result = Math.round(Operation.cosinus(number1) * 100.0) / 100.0;
                 break;
             case 9:
                 // tan
-                result = Math.round(Operation.tangente(number1)*100.0)/100.0;
+                result = Math.round(Operation.tangente(number1) * 100.0) / 100.0;
                 break;
             default:
                 // Choix invalide
