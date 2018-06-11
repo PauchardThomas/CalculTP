@@ -2,14 +2,14 @@
 package com.iia.calcultp;
 
 /**
- * Fonction global to project.
+ * project global function.
  * 
  * @author kevin-pc
  *
  */
 public final class Utils {
 
-    /**Result if string can be parsed in int.  */
+    /**Result if string can be parsed in double.  */
     private static boolean result;
     /**
      * Constructor.
