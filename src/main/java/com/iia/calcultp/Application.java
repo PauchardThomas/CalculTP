@@ -14,6 +14,9 @@ public final class Application {
     /** Max menu number for an operation with 2 numbers. */
     private static final int MAX_NUMBER_MENU = 5;
 
+    /**
+     * Constructor.
+     */
     private Application() {
         super();
     }
@@ -34,7 +37,6 @@ public final class Application {
             System.exit(0);
         } else {
             if (Utils.tryParseInt(userInput)) {
-                //selectOption(userInput);
                 final int userNumber = Integer.parseInt(userInput);
                 if (userNumber <= MAX_NUMBER_MENU) {
                     SelectOperation.selectOptionWithTwoNumbers(userInput);

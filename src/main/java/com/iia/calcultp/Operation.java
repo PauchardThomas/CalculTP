@@ -7,6 +7,9 @@ package com.iia.calcultp;
  */
 public final class Operation {
     
+    /**
+     * Constructor.
+     */
     private Operation() {
         super();
     }
