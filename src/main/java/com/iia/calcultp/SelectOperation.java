@@ -9,19 +9,6 @@ import java.util.Scanner;
  */
 public final class SelectOperation {
     
-    /**
-     * Constructor.
-     */
-    private SelectOperation() {
-        super();
-    }
-    
-    
-    /**
-     * Select the option according user prompt.
-     * @param userInput.
-     */
-    
     /**User input number.*/
     private static String number = "";
     /**User input first number.*/
@@ -32,6 +19,13 @@ public final class SelectOperation {
     private static int result;
     /**Check if operation is done.*/
     private static boolean operationDone;
+    
+    /**
+     * Constructor.
+     */
+    private SelectOperation() {
+        super();
+    }
     
     /**
      * Select option from menu.
