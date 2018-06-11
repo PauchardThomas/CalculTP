@@ -55,11 +55,10 @@ public final class SelectOperation {
                 break;
             default:
                 // Choix invalide
-                result = -1;
-                //Utils.message("Choix invalide");
+                Utils.message("Choix invalide");
                 break;
             } 
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             Utils.message(e.getMessage());
         }
         return result;
