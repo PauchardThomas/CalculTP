@@ -48,7 +48,7 @@ public final class Application {
             number1 = getNumber(prompt());
             Utils.message("Saisir un nombre : ");
             number2 = getNumber(prompt());
-            SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
+            result = SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
          } else {
             Utils.message("Saisir un nombre : ");
             number1 = getNumber(prompt());
