@@ -37,7 +37,7 @@ public class ApplicationTest {
         System.setOut(ps);
 
         Application.showSubMenu();
-        Assert.assertEquals("0- Retour au menu \r\n"
+        Assert.assertEquals("\r\n0- Retour au menu \r\n"
                 + "1- Nouvelle opération\r\n", os.toString());
     }
     
@@ -52,6 +52,25 @@ public class ApplicationTest {
         
         Application.displayResultOperation(result);
         
-        Assert.assertEquals("\r\nresultat de l'opération :" + result, os.toString());
+        Assert.assertEquals("\r\nresultat de l'opération : " + result, os.toString());
+    }
+    
+    @org.junit.Test
+    public void testExecuteTwoNumbersOperation() {
+        
+       int userChoice = 1;
+       int number1 = 2 ,  number2 = 3;
+       double result = Application.executeTwoNumbersOperation(userChoice,number1,number2);
+        
+        Assert.assertEquals(result,5,0.01);
+    }
+    @org.junit.Test
+    public void testExecuteOneNumbersOperation() {
+        
+       int userChoice = 6;
+       int number1 = 20;
+       double result = Application.executeOneNumberOperation(userChoice,number1);
+        
+        Assert.assertEquals(result,0.2,0.01);
     }
 }
