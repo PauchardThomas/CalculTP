@@ -1,6 +1,5 @@
 package com.iia.calcultp;
 
-import java.util.Scanner;
 
 /**
  * Static class for the switch.
