@@ -93,13 +93,14 @@ public final class SelectOperation {
         if(operationDone) {
             Utils.message("Résultat de l'opération : " + result);
         }
-    }    
+    }
+    
     /**
      * Add two value.
      * @return result of addition.
      */
    
-	public static int getNumber() {
+    public static int getNumber() {
         String number = "";
         do
         {
