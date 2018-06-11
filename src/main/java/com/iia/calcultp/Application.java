@@ -25,7 +25,7 @@ public final class Application {
         showMenu();
         
         Utils.message("Veuillez saisir une option : ");
-        final String userInput = new Scanner(System.in).nextLine();
+        final String userInput = new Scanner(System.in,"UTF-8").nextLine();
         
         if ("q".equals(userInput)) {
             System.out.print("Au revoir!");
