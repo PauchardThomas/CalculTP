@@ -54,12 +54,11 @@ public final class Operation {
      * @return result of divide.
      */
     public static double divide(final double number1, final double number2) {
-        if (number2 == 0) {
+        if(number2 == 0) {
             Utils.message("Impossible de diviser par 0");
-        } else {
-            result = number1 / number2;
+            throw new ArithmeticException("Le dénominateur ne peut pas être égal à 0");
         }
-        return result;
+        return number1 / number2;
     }
     /**
      * Modulo de 2 nombres.
