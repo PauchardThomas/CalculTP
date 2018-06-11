@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class ApplicationTest {
 
@@ -72,5 +73,11 @@ public class ApplicationTest {
        double result = Application.executeOneNumberOperation(userChoice,number1);
         
         Assert.assertEquals(result,0.2,0.01);
+    }
+    
+    @Test
+    public void testExecuteGetNummber() {
+        double result = Application.getNumber();
+        Assert.assertEquals(result,1,0.01);
     }
 }
