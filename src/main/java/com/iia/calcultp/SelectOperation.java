@@ -99,15 +99,15 @@ public final class SelectOperation {
     }
     
     /**
-     * Add two value.
-     * @return result of addition.
+     * Get user prompt number.
+     * @return user prompt number
      */
    
     public static int getNumber() {
+        Utils.message("Saisir un nombre : ");
         do {
-            Utils.message("Saisir un nombre : ");
             try {
-                number = new Scanner(System.in).nextLine();
+                number = new Scanner(System.in, "UTF-8").nextLine();
             } catch (Exception e) {
                 Utils.message(e.getMessage());
             }
