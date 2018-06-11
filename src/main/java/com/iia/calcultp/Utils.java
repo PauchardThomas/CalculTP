@@ -9,6 +9,8 @@ package com.iia.calcultp;
  */
 public final class Utils {
 
+    /**Result if string can be parsed in int  */
+    private static boolean result;
     /**
      * Constructor.
      */
