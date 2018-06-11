@@ -13,14 +13,22 @@ public final class SelectOperation {
      * @param userInput.
      */
     
+    /**User input number.*/
     private static String number = "";
+    /**User input first number.*/
+    private static int number1;
+    /**User input second number.*/
+    private static int number2;
+    /**Operation result.*/
+    private static int result;
+    /**Check if operation is done.*/
+    private static boolean operationDone;
     
     public static void selectOption(final String userInput) {
         
-        final int number1 = getNumber();
-        final int number2 = getNumber();
-        int result = 0;
-        boolean operationDone = true;
+        number1 = getNumber();
+        number2 = getNumber();
+        operationDone = true;
         
         switch (Integer.parseInt(userInput)) {
         case 1:
