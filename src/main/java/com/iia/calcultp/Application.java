@@ -12,7 +12,7 @@ import java.util.Scanner;
 public final class Application {
 
     /** Max menu number for an operation with 2 numbers. */
-    private static final int MAX_TWO_NUMBER_OPE = 5;
+    private static final int MAX_TWO_NB_OPE = 5;
     /**User input number.*/
     private static String number = "";
     /**User input first number.*/
@@ -43,10 +43,13 @@ public final class Application {
      * @param userOperationChoice user operation choice
      */
     private static void manageOperation(final int userOpeChoice) {
-        if (userOpeChoice <= MAX_TWO_NUMBER_OPE) {
-            result =  executeTwoNumbersOperation(userOpeChoice);
+        if (userOpeChoice <= MAX_TWO_NB_OPE) {
+            number1 = getNumber();
+            number2 = getNumber();
+            result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
          } else {
-            result = executeOneNumberOperation(userOpeChoice);
+            number1 = getNumber();
+            result = executeOneNumberOperation(userOpeChoice, number1);
          }
         displayResultOperation(result);
         showSubMenu();
@@ -58,9 +61,7 @@ public final class Application {
      * @param userInput user operation chose
      * @return operation result
      */
-    private static double executeTwoNumbersOperation(final int userInput) {
-        number1 = getNumber();
-        number2 = getNumber();
+    public static double executeTwoNumbersOperation(final int userInput, final double number1, final double number2) {
         return  SelectOperation.selectOptionWithTwoNumbers(userInput, number1, number2);
     }
     
@@ -69,18 +70,17 @@ public final class Application {
      * @param userInput user operation chose
      * @return operation result
      */
-    private static double executeOneNumberOperation(final int userInput) {
-        number1 = getNumber();
+    public static double executeOneNumberOperation(final int userInput, final double number1) {
         return SelectOperation.selectOption(userInput, number1);
     }
 
     /**
-     * Affiche le résultat de l'opération.
+     * Display operation result
      * @param result
      */
     public static void displayResultOperation(final double result) {
         if (result != -1) {
-           Utils.message("resultat de l'opération :" + result); 
+           Utils.message("resultat de l'opération : " + result); 
         }
     }
     
@@ -134,7 +134,7 @@ public final class Application {
      * Show submenu.
      */
     public static void showSubMenu() {
-        System.out.print("0- Retour au menu \r\n");
+        System.out.print("\r\n0- Retour au menu \r\n");
         System.out.print("1- Nouvelle opération\r\n");
     }
     
@@ -157,6 +157,10 @@ public final class Application {
             default:
                 break;
             }
+        } else {
+            Utils.message("Veuillez saisir une valeur entre 0 et 1");
+            System.lineSeparator();
+            manageSubMenu(currentOperation);
         }
     }
     
