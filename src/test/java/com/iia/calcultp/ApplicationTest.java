@@ -81,12 +81,12 @@ public class ApplicationTest {
         Assert.assertEquals(result,0.2,0.01);
     }*/
 
-    @org.junit.Test
+    /*@org.junit.Test
     public void testGetNumber() {
         
        String userPromptNumber = "6";
        double result = Application.getNumber(userPromptNumber);
         
         Assert.assertEquals(result,6,0.01);
-    }
+    }*/
 }
