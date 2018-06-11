@@ -7,9 +7,6 @@ package com.iia.calcultp;
  */
 public final class Operation {
     
-    /** Operation result. */
-    private static double result;
-    
     /**
      * Constructor.
      */
@@ -54,7 +51,7 @@ public final class Operation {
      * @return result of divide.
      */
     public static double divide(final double number1, final double number2) {
-        if(number2 == 0) {
+        if (number2 == 0) {
             Utils.message("Impossible de diviser par 0");
             throw new ArithmeticException("Le dénominateur ne peut pas être égal à 0");
         }
