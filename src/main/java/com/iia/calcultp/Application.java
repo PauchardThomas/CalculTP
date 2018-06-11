@@ -13,6 +13,14 @@ public final class Application {
 
     /** Max menu number for an operation with 2 numbers. */
     private static final int MAX_NUMBER_MENU = 5;
+    /**User input number.*/
+    private static String number = "";
+    /**User input first number.*/
+    private static double number1;
+    /**User input second number.*/
+    private static double number2;
+    /** Operation result*/
+    private static double result;
 
     /**
      * Constructor.
@@ -36,18 +44,32 @@ public final class Application {
             System.out.print("Au revoir!");
             System.exit(0);
         } else {
-            if (Utils.tryParseInt(userInput)) {
+            if (Utils.tryParseDouble(userInput)) {
                 final int userNumber = Integer.parseInt(userInput);
                 if (userNumber <= MAX_NUMBER_MENU) {
-                    SelectOperation.selectOptionWithTwoNumbers(userInput);
+                   number1 = getNumber();
+                   number2 = getNumber();
+                   result =  SelectOperation.selectOptionWithTwoNumbers(userInput,number1,number2);
                 } else {
-                    SelectOperation.selectOption(userInput);
+                    number1 = getNumber();
+                   result = SelectOperation.selectOption(userInput,number1);
                 }
+                displayResultOperation(result);
             } else {
                 Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
             }
         }
     }
+    /**
+     * Affiche le résultat de l'opération
+     * @param result
+     */
+    public static void displayResultOperation(final double result) {
+        if (result != -1) {
+           Utils.message("resultat de l'opération :" + result); 
+        }
+    }
+    
     /**
      * Show application menu.
      */
@@ -66,4 +88,21 @@ public final class Application {
         System.out.print("8- Historique des opérations\r\n");
     }
     
+    /**
+     * Get user prompt number.
+     * @return user prompt number
+     */
+    public static double getNumber() {
+        Utils.message("Saisir un nombre : ");
+        final Scanner scannerInputUser = new Scanner(System.in, "UTF-8");
+        do {
+            try {
+                number = scannerInputUser.nextLine();
+            } catch (Exception e) {
+                Utils.message(e.getMessage());
+            }
+        }while(!Utils.tryParseDouble(number));
+
+        return Double.parseDouble(number);
+    }
 }

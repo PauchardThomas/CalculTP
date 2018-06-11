@@ -9,18 +9,9 @@ import java.util.Scanner;
  */
 public final class SelectOperation {
 
-    /**User input number.*/
-    private static String number = "";
-    /**User input first number.*/
-    private static int number1;
-    /**User input second number.*/
-    private static int number2;
+
     /**Operation result.*/
-    private static int result;
-    /**Operation double result.*/
-    private static double doubleResult;
-    /**Check if operation is done.*/
-    private static boolean operationDone;
+    private static double result;
 
     /**
      * Constructor.
@@ -33,11 +24,8 @@ public final class SelectOperation {
      * Select option from menu.
      * @param userInput input filed user
      */
-    public static void selectOptionWithTwoNumbers(final String userInput) {
+    public static double selectOptionWithTwoNumbers(final String userInput,final double number1, final double number2) {
 
-        number1 = getNumber();
-        number2 = getNumber();
-        operationDone = true;
         try {
             switch (Integer.parseInt(userInput)) {
             case 1:
@@ -56,7 +44,7 @@ public final class SelectOperation {
                 //division
                 if (number2 == 0) {
                     Utils.message("Division par 0 impossible");
-                    operationDone = false;
+                    result = -1;
                 } else {
                     result = Operation.divide(number1, number2);
                 }
@@ -67,32 +55,26 @@ public final class SelectOperation {
                 break;
             default:
                 // Choix invalide
-                Utils.message("Choix invalide");
-                operationDone = false;
+                result = -1;
+                //Utils.message("Choix invalide");
                 break;
             } 
         } catch (NumberFormatException e) {
             Utils.message(e.getMessage());
         }
-
-        if (operationDone) {
-            Utils.message("Résultat de l'opération : " + result);
-        }
+        return result;
     }
     /**
      * Select option from menu.
      * @param userInput
      */
-    public static void selectOption(final String userInput) {
-
-        number1 = getNumber();
-        operationDone = true;
+    public static double selectOption(final String userInput, final double number1) {
 
         switch (Integer.parseInt(userInput)) {
         case 6:
             // pourcentage
             try {
-                doubleResult = Operation.pourcentage((double) number1);
+                result = Operation.pourcentage(number1);
             } catch (NullPointerException e) {
                 Utils.message(e.getMessage());
             }
@@ -100,40 +82,16 @@ public final class SelectOperation {
         case 7:
             // sin cos tang
             Utils.message("En construction...");
-            operationDone = false;
             break;
         case 8:
             // historique
             Utils.message("En construction....");
-            operationDone = false;
             break;
         default:
             // Choix invalide
             Utils.message("Choix invalide");
-            operationDone = false;
             break;
         } 
-        if (operationDone) {
-            Utils.message("Résultat de l'opération : " + doubleResult);
-        }
-    }
-
-    /**
-     * Get user prompt number.
-     * @return user prompt number
-     */
-
-    public static int getNumber() {
-        Utils.message("Saisir un nombre : ");
-        final Scanner scannerInputUser = new Scanner(System.in, "UTF-8");
-        do {
-            try {
-                number = scannerInputUser.nextLine();
-            } catch (Exception e) {
-                Utils.message(e.getMessage());
-            }
-        }while(!Utils.tryParseInt(number));
-
-        return Integer.parseInt(number);
+        return result;
     }
 }

@@ -12,7 +12,7 @@ public final class UtilsTest {
     public void testTryParseIntWithInt() {
         String str = "1";
         
-        boolean isInt = Utils.tryParseInt(str);
+        boolean isInt = Utils.tryParseDouble(str);
         Assert.assertEquals(isInt,true);
     }
     
@@ -20,7 +20,7 @@ public final class UtilsTest {
     public void testTryParseIntWithString() {
         String str = "a";
         
-        boolean isInt = Utils.tryParseInt(str);
+        boolean isInt = Utils.tryParseDouble(str);
         Assert.assertEquals(isInt,false);
     }
     

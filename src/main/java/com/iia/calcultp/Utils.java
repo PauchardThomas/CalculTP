@@ -28,14 +28,14 @@ public final class Utils {
     }
 
     /**
-     * Essaie de parser une string en int.
+     * Essaie de parser une string en double.
      * 
      * @param value valeur à parser
      * @return true si parsable , false si non parsable
      */
-    public static boolean tryParseInt(final String value) {
+    public static boolean tryParseDouble(final String value) {
         try {
-            Integer.parseInt(value);
+            Double.parseDouble(value);
             result = true;
         } catch (NumberFormatException e) {
             Utils.message(e.getMessage());
