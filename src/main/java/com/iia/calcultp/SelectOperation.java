@@ -107,7 +107,7 @@ public final class SelectOperation {
             try {
             	number = new Scanner(System.in).nextLine();
 			} catch (Exception e) {
-				continue;// TODO: handle exception
+				 e.printStackTrace();;
 			}
 
         }while(!Utils.tryParseInt(number));
