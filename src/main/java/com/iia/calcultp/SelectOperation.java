@@ -3,7 +3,7 @@ package com.iia.calcultp;
 import java.util.Scanner;
 
 /**
- * Statci class for the switch
+ * Static class for the switch.
  * @author kevin-pc.
  *
  */
@@ -25,7 +25,7 @@ public final class SelectOperation {
            try {
                result = Operation.add(number1, number2);
            } catch (NumberFormatException e) {
-               e.printStackTrace();
+               Utils.message(e.getMessage());
            }
            break;
         case 2:
@@ -33,7 +33,7 @@ public final class SelectOperation {
             try {
                 result = Operation.substract(number1, number2);
             } catch (NumberFormatException e) {
-                e.printStackTrace();
+                Utils.message(e.getMessage());
             }
             break;
         case 3:
@@ -41,19 +41,19 @@ public final class SelectOperation {
             try {
                 result = Operation.multiply(number1, number2);
             } catch (NumberFormatException e) {
-                e.printStackTrace();
+                Utils.message(e.getMessage());
             }
             break;
         case 4:
             //division
-            if(number2 == 0) {
+            if (number2 == 0) {
                 Utils.message("Division par 0 impossible");
                 operationDone = false;
-            }else {
+            } else {
                 try {
                     result = Operation.divide(number1, number2);
                 } catch (NullPointerException e) {
-                    e.printStackTrace();
+                    Utils.message(e.getMessage());
                 }
                 
             }
@@ -63,7 +63,7 @@ public final class SelectOperation {
             try {
                 result = Operation.modulo(number1, number2);
             } catch (NumberFormatException e) {
-                e.printStackTrace();
+                Utils.message(e.getMessage());
             }
             break;
         case 6:
@@ -71,7 +71,7 @@ public final class SelectOperation {
             try {
                 result = Operation.pourcentage(number1);
             } catch (NullPointerException e) {
-                e.printStackTrace();
+                Utils.message(e.getMessage());
             }
             break;
         case 7:
@@ -90,7 +90,7 @@ public final class SelectOperation {
             operationDone = false;
             break;
         } 
-        if(operationDone) {
+        if (operationDone) {
             Utils.message("Résultat de l'opération : " + result);
         }
     }    
@@ -101,13 +101,12 @@ public final class SelectOperation {
    
 	public static int getNumber() {
         String number = "";
-        do
-        {
+        do {
             Utils.message("Saisir un nombre : ");
             try {
                 number = new Scanner(System.in).nextLine();
             } catch (Exception e) {
-                e.printStackTrace();;
+                Utils.message(e.getMessage());
             }
         }while(!Utils.tryParseInt(number));
         
