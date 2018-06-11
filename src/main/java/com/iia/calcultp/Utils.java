@@ -10,20 +10,20 @@ package com.iia.calcultp;
 public final class Utils {
 
     /**
-     * Constructor
+     * Constructor.
      */
     private Utils() {
         super();
     }
-    
-	/**
-	 * Print message in console.
-	 * 
-	 * @param message
-	 */
-	public static void message(final String message) {
-		System.out.print("\r\n" + message);
-	}
+
+    /**
+     * Print message in console.
+     * 
+     * @param message
+     */
+    public static void message(final String message) {
+        System.out.print("\r\n" + message);
+    }
 
     /**
      * Essaie de parser une string en int.
@@ -40,5 +40,5 @@ public final class Utils {
             Utils.message(e.getMessage());
         }
         return result;
-	}
+    }
 }
