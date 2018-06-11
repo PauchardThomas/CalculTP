@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class ApplicationTest {
 
@@ -74,7 +75,7 @@ public class ApplicationTest {
         
         Assert.assertEquals(result,0.2,0.01);
     }
-    
+
     @org.junit.Test
     public void testGetNumber() {
         
