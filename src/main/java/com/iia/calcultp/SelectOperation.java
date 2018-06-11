@@ -29,7 +29,7 @@ public final class SelectOperation {
 
     /**
      * Select option from menu.
-     * @param userInput
+     * @param userInput input filed user
      */
     public static void selectOptionWithTwoNumbers(final String userInput) {
 
