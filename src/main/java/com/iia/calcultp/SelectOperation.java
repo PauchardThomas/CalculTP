@@ -8,6 +8,15 @@ import java.util.Scanner;
  *
  */
 public final class SelectOperation {
+    
+    /**
+     * Constructor.
+     */
+    private SelectOperation() {
+        super();
+    }
+    
+    
     /**
      * Select the option according user prompt.
      * @param userInput.
@@ -25,7 +34,7 @@ public final class SelectOperation {
     private static boolean operationDone;
     
     /**
-     * Check the choice user.
+     * Select option from menu.
      * @param userInput
      */
     public static void selectOption(final String userInput) {
