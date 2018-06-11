@@ -26,7 +26,6 @@ public final class SelectOperation {
     public static double selectOptionWithTwoNumbers(final int userInput, 
             final double number1, final double number2) {
 
-        try {
             switch (userInput) {
             case 1:
                 // addition
@@ -54,14 +53,11 @@ public final class SelectOperation {
                 result = Operation.modulo(number1, number2);
                 break;
             default:
-                // Choix invalide
+                // Default value
                 result = -1;
-                //Utils.message("Choix invalide");
+                Utils.message("Choix invalide");
                 break;
             } 
-        } catch (Exception e) {
-            Utils.message(e.getMessage());
-        }
         return result;
     }
     /**
@@ -73,7 +69,7 @@ public final class SelectOperation {
         try {
             switch (userInput) {
             case 6:
-            // pourcentage
+                // Percent
                 result = Operation.pourcentage(number1);
                 break;
             case 7:
@@ -89,7 +85,8 @@ public final class SelectOperation {
                 result = Math.round(Operation.tangente(number1) * 100.0) / 100.0;
                 break;
             default:
-                // Choix invalide
+                // Default value
+                result = -1;
                 Utils.message("Choix invalide");
                 break;
             } 
