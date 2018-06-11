@@ -105,11 +105,10 @@ public final class SelectOperation {
         {
             Utils.message("Saisir un nombre : ");
             try {
-            	number = new Scanner(System.in).nextLine();
-			} catch (Exception e) {
-				 e.printStackTrace();;
-			}
-
+                number = new Scanner(System.in).nextLine();
+            } catch (Exception e) {
+                e.printStackTrace();;
+            }
         }while(!Utils.tryParseInt(number));
         
         return Integer.parseInt(number);
