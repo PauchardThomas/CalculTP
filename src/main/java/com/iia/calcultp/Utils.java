@@ -18,6 +18,9 @@ public final class Utils {
         super();
     }
 
+    /**Boolean result for tryParseInt.*/
+    private static boolean result = false;
+    
     /**
      * Print message in console.
      * 
