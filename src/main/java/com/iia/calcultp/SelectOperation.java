@@ -12,6 +12,9 @@ public final class SelectOperation {
      * Select the option according user prompt.
      * @param userInput.
      */
+    
+    private static String number = "";
+    
     public static void selectOption(final String userInput) {
         
         final int number1 = getNumber();
@@ -101,7 +104,6 @@ public final class SelectOperation {
      */
    
     public static int getNumber() {
-        String number = "";
         do {
             Utils.message("Saisir un nombre : ");
             try {
