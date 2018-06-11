@@ -56,7 +56,7 @@ public final class Application {
          }
         displayResultOperation(result);
         showSubMenu();
-        manageSubMenu(userOpeChoice,prompt());
+        manageSubMenu(userOpeChoice, prompt());
     }
 
     /**
@@ -161,7 +161,7 @@ public final class Application {
         } else {
             Utils.message("Veuillez saisir une valeur entre 0 et 1");
             System.lineSeparator();
-            manageSubMenu(currentOperation,prompt());
+            manageSubMenu(currentOperation, prompt());
         }
     }
     
