@@ -54,11 +54,10 @@ public final class Operation {
      * @return result of divide.
      */
     public static double divide(final double number1, final double number2) {
-        
-        try {
+        if (number2 == 0) {
+            Utils.message("Impossible de diviser par 0");
+        } else {
             result = number1 / number2;
-        } catch (java.lang.ArithmeticException e) {
-            Utils.message(e.getMessage());
         }
         return result;
     }
