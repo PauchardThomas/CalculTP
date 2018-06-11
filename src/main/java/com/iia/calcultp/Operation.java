@@ -65,7 +65,7 @@ public final class Operation {
      * @param number1.
      * @return pourcentage du nombre.
      */
-    public static int pourcentage(final int number1) {
+    public static double pourcentage(final double number1) {
         return number1 / 100;
     }
 }

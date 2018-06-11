@@ -17,6 +17,8 @@ public final class SelectOperation {
     private static int number2;
     /**Operation result.*/
     private static int result;
+    /**Operation double result.*/
+    private static double doubleResult;
     /**Check if operation is done.*/
     private static boolean operationDone;
 
@@ -84,14 +86,13 @@ public final class SelectOperation {
     public static void selectOption(final String userInput) {
 
         number1 = getNumber();
-        number2 = getNumber();
         operationDone = true;
 
         switch (Integer.parseInt(userInput)) {
         case 6:
             // pourcentage
             try {
-                result = Operation.pourcentage(number1);
+                doubleResult = Operation.pourcentage((double) number1);
             } catch (NullPointerException e) {
                 Utils.message(e.getMessage());
             }
@@ -113,7 +114,7 @@ public final class SelectOperation {
             break;
         } 
         if (operationDone) {
-            Utils.message("Résultat de l'opération : " + result);
+            Utils.message("Résultat de l'opération : " + doubleResult);
         }
     }
 
