@@ -8,3 +8,30 @@
 [INFO ] 2018-06-12 12:18:54.147 [main] TestLog4j1 - End show menu
 [INFO ] 2018-06-12 12:18:54.147 [main] TestLog4j1 - Start reading user input
 [INFO ] 2018-06-12 12:18:54.151 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:31:10.268 [main] TestLog4j1 - Start application
+[INFO ] 2018-06-12 13:31:10.283 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 13:31:10.284 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 13:31:10.284 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:31:10.288 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:31:14.479 [main] TestLog4j1 - User input 1
+[INFO ] 2018-06-12 13:31:14.481 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:31:14.481 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:31:16.470 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:31:16.470 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:31:17.810 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 13:33:15.716 [main] TestLog4j1 - Start application
+[INFO ] 2018-06-12 13:33:15.719 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 13:33:15.719 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 13:33:15.720 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:33:15.723 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:33:17.741 [main] TestLog4j1 - User input 1
+[INFO ] 2018-06-12 13:33:17.742 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:33:17.743 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:33:19.143 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:33:19.143 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 13:33:20.067 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 13:33:20.230 [main] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - End reading user input

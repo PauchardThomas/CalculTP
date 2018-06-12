@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Running log4j2
+ * Running log4j2.
  * @author kevin-pc
  *
  */
