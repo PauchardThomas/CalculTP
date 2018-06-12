@@ -15,7 +15,7 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <Logger name="com.iia.calcultp" level="debug" additivity="true">
+        <Logger name="com.iia.calcultp" level="debug" additivity="false">
             <appender-ref ref="fileLogger" level="debug" />
         </Logger>
         <!--Root level="debug" additivity="false">

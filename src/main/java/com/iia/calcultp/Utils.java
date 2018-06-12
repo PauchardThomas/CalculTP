@@ -1,6 +1,9 @@
 /* Copyright Pauchard Thomas 07/06/20 */
 package com.iia.calcultp;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * project global function.
  * 
@@ -9,6 +12,8 @@ package com.iia.calcultp;
  */
 public final class Utils {
 
+    /**Log.*/
+    private static Logger logger = LogManager.getLogger(TestLog4j1.class);
     /**Result if string can be parsed in double.  */
     private static boolean result;
     /**
@@ -39,6 +44,7 @@ public final class Utils {
             result = true;
         } catch (NumberFormatException e) {
             Utils.message("La valeur " + value + " est incorrecte. Veuillez insérer une valeur valide : ");
+            logger.fatal("the built-in FATAL level");
             result = false;
         }
         return result;
