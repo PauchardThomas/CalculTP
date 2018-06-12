@@ -111,6 +111,7 @@ public final class SelectOperation {
             case 10:
                 // In progress
                 Utils.message("En cours..");
+                result = -1;
                 break;
             default:
                 logger.info("Execute default case");
