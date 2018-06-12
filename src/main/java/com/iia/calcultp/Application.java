@@ -48,7 +48,7 @@ public final class Application {
     private Application() {
         super();
     }
-    
+
     /**
      * Display operation result.
      * @param result
@@ -117,7 +117,7 @@ public final class Application {
             result = SelectOperation.selectOption(userOpeChoice, number1);
 
         } else {
-            Utils.message("Saisir votre op�ration : ");
+            Utils.message("Saisir votre opération : ");
             final String prompt = prompt();
             if (isMathsExpression(prompt)) {
                 result = Calcul.eval(prompt);
@@ -130,7 +130,7 @@ public final class Application {
         showSubMenu();
         manageSubMenu(userOpeChoice, prompt());
     }
-    
+
     /**
      * Manage submenu.
      * @param currentOperation currentOperation
@@ -186,19 +186,20 @@ public final class Application {
      */
     public static boolean isContainDoubleOperator(final String str) {
         boolean isDoubleOperator = false;
-        for (final char ch: str.toCharArray()) {
-
-            if (ch == previousChar && operatorList.indexOf(ch) != NOT_FOUND
-                    || (parentheseList.indexOf(ch) != NOT_FOUND && (parentheseList.indexOf(previousChar) != -1))
-                    || (operatorList.indexOf(previousChar) == NOT_FOUND && ch == '(')
-                    ) {
-                isDoubleOperator = true;
-                break;
+        if(str != null) {
+            if (str.toCharArray().length > 0) {
+                for (final char ch: str.toCharArray()) {
+                    if (ch == previousChar && operatorList.indexOf(ch) != NOT_FOUND
+                            || (parentheseList.indexOf(ch) != NOT_FOUND && (parentheseList.indexOf(previousChar) != -1))
+                            || (operatorList.indexOf(previousChar) == NOT_FOUND && ch == '(')
+                            ) {
+                        isDoubleOperator = true;
+                        break;
+                    }
+                    previousChar = ch;
+                }
             }
-
-            previousChar = ch;
         }
-
         return isDoubleOperator;
     }
 
