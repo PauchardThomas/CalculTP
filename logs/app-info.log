@@ -108,3 +108,8 @@
 [INFO ] 2018-06-12 14:30:49.707 [main] TestLog4j1 - cos(1,000000) = 0,540000
 [INFO ] 2018-06-12 14:30:49.707 [main] TestLog4j1 - Execute tangente
 [INFO ] 2018-06-12 14:30:49.707 [main] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 15:03:30.423 [main] TestLog4j1 - Start application
+[INFO ] 2018-06-12 15:03:30.423 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 15:03:30.423 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 15:03:30.423 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 15:03:30.439 [main] TestLog4j1 - End reading user input
