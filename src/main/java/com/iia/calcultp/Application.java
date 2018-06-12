@@ -46,8 +46,7 @@ public final class Application {
 
     public static void main(final String[] args) {
         logger.info("Start application");
-        Historical.initFile();
-        //Historical.listFile();
+        Historical.initFile();;
         showMenu();
         manageMenu(prompt());
     }

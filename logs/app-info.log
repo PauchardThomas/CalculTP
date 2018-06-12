@@ -35,3 +35,8 @@
 [INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - End submenu
 [INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - Start reading user input
 [INFO ] 2018-06-12 13:33:20.231 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 14:09:52.347 [main] TestLog4j1 - Start application
+[INFO ] 2018-06-12 14:09:52.363 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:09:52.363 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:09:52.363 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 14:09:52.363 [main] TestLog4j1 - End reading user input
