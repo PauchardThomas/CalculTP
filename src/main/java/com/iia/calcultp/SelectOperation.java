@@ -83,6 +83,10 @@ public final class SelectOperation {
                 // tan
                 result = Math.round(Operation.tangente(number1) * 100.0) / 100.0;
                 break;
+            case 10:
+                // In progress
+                Utils.message("En cours..");
+                break;
             default:
                 // Default value
                 result = -1;
