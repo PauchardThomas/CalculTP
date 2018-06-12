@@ -2,6 +2,8 @@
 
 package com.iia.calcultp;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,6 +31,8 @@ public final class Application {
     private static double number2;
     /** Operation result. */
     private static double result;
+    
+
 
     /**
      * Constructor.
@@ -41,8 +45,11 @@ public final class Application {
      * Entry point of application.
      * @param args Arguments from CLI.
      */
+
     public static void main(final String[] args) {
         logger.info("Start application");
+        Historical.initFile();
+        //Historical.listFile();
         showMenu();
         manageMenu(prompt());
     }
