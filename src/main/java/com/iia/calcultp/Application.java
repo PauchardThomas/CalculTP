@@ -21,6 +21,10 @@ public final class Application {
     private static final int MAX_TWO_NB_OPE = 5;
     /** Max menu number for an operation with 1 numbers. */
     private static final int MAX_ONE_NB_OPE = 9;
+    /** historical option. */
+    private static final int HISTORICAL = 11;
+    /** free operation. */
+    private static final int FREE_OPERATION = 12;
     /**User input number.*/
     private static String number = "";
     /**User input first number.*/
@@ -116,15 +120,15 @@ public final class Application {
             //result = executeOneNumberOperation(userOpeChoice, number1);
             result = SelectOperation.selectOption(userOpeChoice, number1);
 
-        } else if (userOpeChoice == 11) {
-            boolean isDeleted = Historical.deleteFile();
+        } else if (userOpeChoice == HISTORICAL) {
+            final boolean isDeleted = Historical.deleteFile();
             if (isDeleted) {
                 System.out.print("Historique supprimé !");
             } else {
                 System.out.print("Echec de la suppression !");
             }
             
-        } else if (userOpeChoice == 12) {
+        } else if (userOpeChoice == FREE_OPERATION) {
             Utils.message("Saisir votre opération : ");
             final String prompt = prompt();
             if (isMathsExpression(prompt)) {
