@@ -189,10 +189,8 @@ public final class Application {
      * Show submenu.
      */
     public static void showSubMenu() {
-        logger.info("Start submenu");
         System.out.print("\r\n0- Retour au menu \r\n");
         System.out.print("1- Nouvelle opération\r\n");
-        logger.info("End submenu");
     }
     /**
      * Constructor.

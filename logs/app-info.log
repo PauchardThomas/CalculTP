@@ -42,3 +42,21 @@
 [INFO ] 2018-06-12 14:31:15.793 [main] TestLog4j1 - Execute tangente
 [INFO ] 2018-06-12 14:31:15.793 [main] TestLog4j1 - tan(1,000000) = 1,560000
 [INFO ] 2018-06-12 14:31:15.793 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:39:34.256 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:39:34.258 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:39:34.461 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:39:34.461 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:40:43.638 [main] TestLog4j1 - Start application
+[INFO ] 2018-06-12 14:40:43.667 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:40:43.668 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:40:43.668 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 14:40:43.673 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 14:41:07.168 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:41:07.171 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:41:24.060 [main] TestLog4j1 - Start application
+[INFO ] 2018-06-12 14:41:24.069 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:41:24.069 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:41:24.069 [main] TestLog4j1 - Start reading user input
+[INFO ] 2018-06-12 14:41:24.073 [main] TestLog4j1 - End reading user input
+[INFO ] 2018-06-12 14:43:23.032 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:43:23.035 [main] TestLog4j1 - End show menu
