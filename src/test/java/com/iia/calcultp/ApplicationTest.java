@@ -68,6 +68,14 @@ public class ApplicationTest {
         boolean result = Application.isContainDoubleOperator(str);
         Assert.assertEquals(result,true);
         
+        String str5 = null;
+        boolean result5 = Application.isContainDoubleOperator(str5);
+        Assert.assertEquals(result5,false);
+        
+        String str6 = "";
+        boolean result6 = Application.isContainDoubleOperator(str6);
+        Assert.assertEquals(result6,false);
+        
         String str2 = "2*(4-3)";
         boolean result2 = Application.isContainDoubleOperator(str2);
         Assert.assertEquals(result2,false);
