@@ -36,6 +36,10 @@ public class SelectOperationTest extends TestCase {
         assertTrue(SelectOperation.selectOption(8, 1) == 0.54);
         //Tangente
         assertTrue(SelectOperation.selectOption(9, 1) == 1.56);
+        //Historique
+        assertTrue(SelectOperation.selectOption(10, 1) == -1);
+        //Default
+        assertTrue(SelectOperation.selectOption(11, 1) == -1);
         
     }
     
