@@ -2,6 +2,8 @@
 
 package com.iia.calcultp;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -21,6 +23,8 @@ public final class Application {
     private static double number2;
     /** Operation result. */
     private static double result;
+    
+
 
     /**
      * Constructor.
@@ -33,7 +37,10 @@ public final class Application {
      * Entry point of application.
      * @param args Arguments from CLI.
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) {       
+        Historical.initFile();
+        //Historical.listFile();
+        
         showMenu();
         manageMenu(prompt());
     }
