@@ -8,11 +8,22 @@ import org.apache.logging.log4j.Logger;
  * @author kevin-pc
  *
  */
-public class TestLog4j1 {
-    
+public final class TestLog4j1 {
+    /**Log.*/
     private static Logger logger = LogManager.getLogger(TestLog4j1.class);
 
-    public static void main(String[] args) {
+    /**
+     * Constructor.
+     */
+    private TestLog4j1() {
+        super();
+    }
+    
+    /**
+     * Message from logger.
+     * @param args
+     */
+    public static void main(final String[] args) {
         logger.debug("msg de debogage");
         logger.info("msg d'information");
         logger.warn("msg d'avertissement");
