@@ -1,5 +1,8 @@
 package com.iia.calcultp;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * 
  * @author Thomas
@@ -53,7 +56,7 @@ public final class Operation {
     public static double divide(final double number1, final double number2) {
         if (number2 == 0) {
             Utils.message("Impossible de diviser par 0");
-            throw new ArithmeticException("Le dénominateur ne peut pas être égal à 0");
+            throw new ArithmeticException("Le dÃ©nominateur ne peut pas Ãªtre Ã©gal Ã  0");
         }
         return number1 / number2;
     }
