@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
  */
 public final class Utils {
 
-    /**Log*/
+    /**Log.*/
     private static Logger logger = LogManager.getLogger(TestLog4j1.class);
     /**Result if string can be parsed in double.  */
     private static boolean result;

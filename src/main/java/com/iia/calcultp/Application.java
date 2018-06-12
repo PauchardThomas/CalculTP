@@ -3,9 +3,9 @@
 package com.iia.calcultp;
 
 import java.util.Scanner;
-
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 
 /**
  * My main Application.
@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
  */
 public final class Application {
     
-    /**Log*/
+    /**Log.*/
     private static Logger logger = LogManager.getLogger(TestLog4j1.class);
     /** Max menu number for an operation with 2 numbers. */
     private static final int MAX_TWO_NB_OPE = 5;
@@ -59,7 +59,7 @@ public final class Application {
             //result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
             result = SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
          } else {
-            if(userOpeChoice <= MAX_ONE_NB_OPE) {
+            if (userOpeChoice <= MAX_ONE_NB_OPE) {
                 Utils.message("Saisir un nombre : ");
                 number1 = getNumber();
                 //result = executeOneNumberOperation(userOpeChoice, number1);
@@ -119,7 +119,7 @@ public final class Application {
      * Manage menu.
      */
     private static void manageMenu(final String userInput) {
-        logger.info("User input "+userInput);
+        logger.info("User input " + userInput);
         if ("q".equals(userInput)) {
             logger.info("Start method exitApp");
             exitApp();
@@ -178,9 +178,9 @@ public final class Application {
         do {
            number = prompt();
            if (number.contains(",")) {
-               logger.info("Get number with char ',' "+number);
+               logger.info("Get number with char ',' " + number);
                number = number.replaceAll(",", ".");
-               logger.info("Get number after replace char "+number);
+               logger.info("Get number after replace char " + number);
            }
         }while(!Utils.tryParseDouble(number));
 
