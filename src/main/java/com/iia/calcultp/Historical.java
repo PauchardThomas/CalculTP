@@ -37,10 +37,10 @@ public final class Historical {
      * Init file on her directory.
      */
     public static void initFile() {
-        if (!Files.exists(path)) {
-            createFile();
-        } else {
+        if (Files.exists(path)) {
             System.out.print("* Fichier non créé ! * \r\n");
+        } else {
+            createFile();
         }
 
     }
