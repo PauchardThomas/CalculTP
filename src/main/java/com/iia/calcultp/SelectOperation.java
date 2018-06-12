@@ -1,8 +1,7 @@
 package com.iia.calcultp;
 
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-
+import org.apache.logging.log4j.Logger;
 
 /**
  * Static class for the switch.
