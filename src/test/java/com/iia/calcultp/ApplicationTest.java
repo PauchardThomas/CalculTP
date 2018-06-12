@@ -33,7 +33,8 @@ public class ApplicationTest {
                 + "8- cos\r\n"
                 + "9- tang\r\n"
                 + "10- Historique des opérations\r\n"
-                + "11- Opération libre\r\n", os.toString());
+                + "11- Supprimer historique\r\n"
+                + "12- Opération libre\r\n", os.toString());
     }
     
     @org.junit.Test

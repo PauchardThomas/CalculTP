@@ -116,15 +116,6 @@ public final class Application {
             //result = executeOneNumberOperation(userOpeChoice, number1);
             result = SelectOperation.selectOption(userOpeChoice, number1);
 
-        } else if(userOpeChoice == 12) {
-            Utils.message("Saisir votre opération : ");
-            final String prompt = prompt();
-            if (isMathsExpression(prompt)) {
-                result = Calcul.eval(prompt);
-            } else {
-                System.out.print("Expression invalide");
-                result = -1;
-            }
         } else if (userOpeChoice == 11) {
             boolean isDeleted = Historical.deleteFile();
             if (isDeleted) {
@@ -133,7 +124,16 @@ public final class Application {
                 System.out.print("Echec de la suppression !");
             }
             
-        }
+        } else if (userOpeChoice == 12) {
+            Utils.message("Saisir votre opération : ");
+            final String prompt = prompt();
+            if (isMathsExpression(prompt)) {
+                result = Calcul.eval(prompt);
+            } else {
+                System.out.print("Expression invalide");
+                result = -1;
+            }
+        } 
         displayResultOperation(result);
         showSubMenu();
         manageSubMenu(userOpeChoice, prompt());
