@@ -351,3 +351,28 @@
 [INFO ] 2018-06-12 15:15:25.332 [main] TestLog4j1 - End reading user input
 [INFO ] 2018-06-12 15:27:08.387 [main] TestLog4j1 - Show menu
 [INFO ] 2018-06-12 15:27:08.387 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 15:33:14.994 [Test worker] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 15:33:14.994 [Test worker] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute subtraction
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - 1,000000 - 1,000000 = 0,000000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute multiplication
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - 1,000000 x 1,000000 = 1,000000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - 1,000000 / 1,000000 = 1,000000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - 1,000000 / 0,000000 = -1,000000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute modulo
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute percent
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - 10,000000 /100 = 0,100000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute sinus
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - sin(1,000000) = 0,840000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - sin(1.0) = 0.84
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute cosinus
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - cos(1,000000) = 0,540000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute tangente
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - Execute default case
+[FATAL] 2018-06-12 15:33:15.041 [Test worker] TestLog4j1 - the built-in FATAL level

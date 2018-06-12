@@ -127,7 +127,7 @@ public final class Application {
             } else {
                 System.out.print("Echec de la suppression !");
             }
-            
+
         } else if (userOpeChoice == FREE_OPERATION) {
             Utils.message("Saisir votre opération : ");
             final String prompt = prompt();
@@ -198,19 +198,19 @@ public final class Application {
      */
     public static boolean isContainDoubleOperator(final String str) {
         boolean isDoubleOperator = false;
-        if (str != null) {
-            if (str.toCharArray().length > 0) {
-                for (final char ch: str.toCharArray()) {
-                    if (ch == previousChar && operatorList.indexOf(ch) != NOT_FOUND
-                            || (parentheseList.indexOf(ch) != NOT_FOUND && (parentheseList.indexOf(previousChar) != -1))
-                            || (operatorList.indexOf(previousChar) == NOT_FOUND && ch == '(')
-                            ) {
-                        isDoubleOperator = true;
-                        break;
-                    }
-                    previousChar = ch;
+        if (str != null && str.toCharArray().length > 0) {
+            // if (str.toCharArray().length > 0) {
+            for (final char ch: str.toCharArray()) {
+                if (ch == previousChar && operatorList.indexOf(ch) != NOT_FOUND
+                        || (parentheseList.indexOf(ch) != NOT_FOUND && (parentheseList.indexOf(previousChar) != -1))
+                        || (operatorList.indexOf(previousChar) == NOT_FOUND && ch == '(')
+                        ) {
+                    isDoubleOperator = true;
+                    break;
                 }
+                previousChar = ch;
             }
+            //  }
         }
         return isDoubleOperator;
     }
