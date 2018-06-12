@@ -29,6 +29,14 @@ public final class UtilsTest {
     }
     
     @org.junit.Test
+    public void testTryParseDouble() {
+        String str = "1.5";
+        
+        boolean isDouble = Utils.tryParseDouble(str);
+        Assert.assertEquals(isDouble,true);
+    }
+    
+    @org.junit.Test
     public void testMessage() {
         
         OutputStream os = new ByteArrayOutputStream();
