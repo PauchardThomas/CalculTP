@@ -160,3 +160,142 @@
 [INFO ] 2018-06-12 14:48:21.091 [main] TestLog4j1 - End submenu
 [INFO ] 2018-06-12 14:48:21.091 [main] TestLog4j1 - Show menu
 [INFO ] 2018-06-12 14:48:21.091 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:53:27.600 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:53:27.600 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:53:27.600 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:53:27.600 [main] TestLog4j1 - End show menu
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - End show menu
+[FATAL] 2018-06-12 14:53:37.794 [main] TestLog4j1 - the built-in FATAL level
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute subtraction
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - 1,000000 - 1,000000 = 0,000000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute multiplication
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - 1,000000 x 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - 1,000000 / 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - 1,000000 / 0,000000 = -1,000000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute modulo
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute percent
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - 10,000000 /100 = 0,100000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute sinus
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - sin(1,000000) = 0,840000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - sin(1.0) = 0.84
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute cosinus
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - cos(1,000000) = 0,540000
+[INFO ] 2018-06-12 14:53:37.794 [main] TestLog4j1 - Execute tangente
+[INFO ] 2018-06-12 14:53:37.809 [main] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 14:53:37.809 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:54:29.151 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:54:29.151 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:54:29.151 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:54:29.151 [main] TestLog4j1 - End show menu
+[FATAL] 2018-06-12 14:54:29.151 [main] TestLog4j1 - the built-in FATAL level
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute subtraction
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - 1,000000 - 1,000000 = 0,000000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute multiplication
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - 1,000000 x 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - 1,000000 / 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - 1,000000 / 0,000000 = -1,000000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute modulo
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute percent
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - 10,000000 /100 = 0,100000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute sinus
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - sin(1,000000) = 0,840000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - sin(1.0) = 0.84
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute cosinus
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - cos(1,000000) = 0,540000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute tangente
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 14:54:29.167 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:54:42.499 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:54:42.500 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:54:42.503 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:54:42.503 [main] TestLog4j1 - End show menu
+[FATAL] 2018-06-12 14:54:42.504 [main] TestLog4j1 - the built-in FATAL level
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute subtraction
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - 1,000000 - 1,000000 = 0,000000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute multiplication
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - 1,000000 x 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - 1,000000 / 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - 1,000000 / 0,000000 = -1,000000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute modulo
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute percent
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - 10,000000 /100 = 0,100000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute sinus
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - sin(1,000000) = 0,840000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - sin(1.0) = 0.84
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute cosinus
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - cos(1,000000) = 0,540000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute tangente
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 14:54:42.507 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:54:51.870 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:54:51.870 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:54:51.870 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:54:51.870 [main] TestLog4j1 - End show menu
+[FATAL] 2018-06-12 14:54:51.870 [main] TestLog4j1 - the built-in FATAL level
+[INFO ] 2018-06-12 14:54:51.870 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute subtraction
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - 1,000000 - 1,000000 = 0,000000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute multiplication
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - 1,000000 x 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - 1,000000 / 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - 1,000000 / 0,000000 = -1,000000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute modulo
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute percent
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - 10,000000 /100 = 0,100000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute sinus
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - sin(1,000000) = 0,840000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - sin(1.0) = 0.84
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute cosinus
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - cos(1,000000) = 0,540000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute tangente
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 14:54:51.886 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:55:16.463 [main] TestLog4j1 - Start submenu
+[INFO ] 2018-06-12 14:55:16.463 [main] TestLog4j1 - End submenu
+[INFO ] 2018-06-12 14:55:16.463 [main] TestLog4j1 - Show menu
+[INFO ] 2018-06-12 14:55:16.463 [main] TestLog4j1 - End show menu
+[FATAL] 2018-06-12 14:55:16.463 [main] TestLog4j1 - the built-in FATAL level
+[INFO ] 2018-06-12 14:55:16.463 [main] TestLog4j1 - Execute addition
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - 1,000000 + 1,000000 = 2,000000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute subtraction
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - 1,000000 - 1,000000 = 0,000000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute multiplication
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - 1,000000 x 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - 1,000000 / 1,000000 = 1,000000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute division
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - 1,000000 / 0,000000 = -1,000000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute modulo
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute default case
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute percent
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - 10,000000 /100 = 0,100000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute sinus
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - sin(1,000000) = 0,840000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - sin(1.0) = 0.84
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute cosinus
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - cos(1,000000) = 0,540000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute tangente
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - tan(1,000000) = 1,560000
+[INFO ] 2018-06-12 14:55:16.478 [main] TestLog4j1 - Execute default case
