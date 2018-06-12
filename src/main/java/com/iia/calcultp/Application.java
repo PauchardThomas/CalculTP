@@ -186,7 +186,7 @@ public final class Application {
      */
     public static boolean isContainDoubleOperator(final String str) {
         boolean isDoubleOperator = false;
-        if(str != null) {
+        if (str != null) {
             if (str.toCharArray().length > 0) {
                 for (final char ch: str.toCharArray()) {
                     if (ch == previousChar && operatorList.indexOf(ch) != NOT_FOUND
