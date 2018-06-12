@@ -85,8 +85,7 @@ public final class Historical {
                 Utils.message(e.getMessage());
                 result = false;
             }
-        }
-        else {
+        } else {
         result = false;
         }
         return result;
