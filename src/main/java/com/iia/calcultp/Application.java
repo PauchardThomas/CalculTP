@@ -74,7 +74,6 @@ public final class Application {
      * Entry point of application.
      * @param args Arguments from CLI.
      */
-
     public static void main(final String[] args) {
         logger.info("Start application");
         Historical.initFile();
