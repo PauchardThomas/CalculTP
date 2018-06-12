@@ -51,7 +51,7 @@ public final class Calcul {
                     if (eat('+')) {
                         x += parseTerm(); //addition
                     } else if (eat('-')) {
-                        x -= parseTerm(); //soustraction
+                        x -= parseTerm(); //subtraction
                     } else {
                         return x;
                     }

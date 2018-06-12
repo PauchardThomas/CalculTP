@@ -41,8 +41,10 @@ public final class Historical {
     public static boolean initFile() {
         if (Files.exists(path)) {
             System.out.print("* Fichier non créé ! * \r\n");
+            result = true;
         } else {
             createFile();
+            result = false;
         }
         return result;
     }
@@ -50,7 +52,7 @@ public final class Historical {
     /**
      * Create file in directory.
      */
-    public static void createFile() {
+    public static boolean createFile() {
         try {
             System.out.print("* Création fichier ! * \r\n");
             path = Paths.get(filePathString);
@@ -61,23 +63,31 @@ public final class Historical {
                     Utils.message(e.getMessage());
                 }
             }
+            result = true;
         } catch (IOException e) {
             Utils.message(e.getMessage());
+            result = false;
         }
+        return result;
 
     }
 
     /**
      * Delete file in directory.
      */
-    public static void deleteFile() {
+    public static boolean deleteFile() {
         if (Files.exists(path)) {
             try {
                 System.out.print("* Destruction fichier ! * \r\n");
                 Files.delete(path);
+                result = true;
             } catch (IOException e) {
                 Utils.message(e.getMessage());
+                result = false;
             }
+        } else {
+        result = false;
         }
+        return result;
     }
 }
