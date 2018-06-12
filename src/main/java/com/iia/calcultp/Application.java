@@ -2,11 +2,11 @@
 
 package com.iia.calcultp;
 
-import java.util.Scanner;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-
-
+import org.apache.logging.log4j.Logger;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * My main Application.
@@ -14,7 +14,7 @@ import org.apache.logging.log4j.LogManager;
  * @version 1.0
  */
 public final class Application {
-    
+
     /**Log.*/
     private static Logger logger = LogManager.getLogger(TestLog4j1.class);
     /** Max menu number for an operation with 2 numbers. */
@@ -29,9 +29,26 @@ public final class Application {
     private static double number2;
     /** Operation result. */
     private static double result;
+    /** Previous char. */
+    private static char previousChar = '\0';
+    /** operators list. */
+    private static String operatorList = "+-*/^";
+    /** parenthesis list. */
+    private static String parentheseList = "()";
+    /** Not found in indexof. */
+    private static final int NOT_FOUND = -1;
+    /** matcher. */
+    private static Matcher matcher;
+    /** pattern. */
+    private static Pattern pattern; 
+
+    /**
+     * Constructor.
+     */
+    private Application() {
+        super();
+    }
     
-
-
     /**
      * Display operation result.
      * @param result
@@ -52,24 +69,24 @@ public final class Application {
         System.exit(0);
         logger.info("Exit application");
     }
-    
+
     /**
      * Get user prompt number.
      * @return user prompt number
      */
     public static double getNumber() {
         do {
-           number = prompt();
-           if (number.contains(",")) {
-               logger.info("Get number with char ',' " + number);
-               number = number.replaceAll(",", ".");
-               logger.info("Get number after replace char " + number);
-           }
+            number = prompt();
+            if (number.contains(",")) {
+                logger.info("Get number with char ',' " + number);
+                number = number.replaceAll(",", ".");
+                logger.info("Get number after replace char " + number);
+            }
         }while(!Utils.tryParseDouble(number));
 
         return Double.parseDouble(number);
     }
-    
+
     /**
      * Entry point of application.
      * @param args Arguments from CLI.
@@ -80,27 +97,7 @@ public final class Application {
         showMenu();
         manageMenu(prompt());
     }
-    
-    /**
-     * Manage menu.
-     */
-    private static void manageMenu(final String userInput) {
-        logger.info("User input " + userInput);
-        if ("q".equals(userInput)) {
-            logger.info("Start method exitApp");
-            exitApp();
-            logger.info("End method exitApp");
-        } else {
-            if (Utils.tryParseDouble(userInput)) {
-                final int userNumber = Integer.parseInt(userInput);
-                manageOperation(userNumber);
-            } else {
-                Utils.message("Veuillez saisir une valeur entre 1 et 10 (q = quitter)");
-                manageMenu(prompt());
-            }
-        }
-    }
-    
+
     /**
      * Manage operation .
      * @param userOperationChoice user operation choice
@@ -113,15 +110,22 @@ public final class Application {
             number2 = getNumber();
             //result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
             result = SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
-         } else {
-            if (userOpeChoice <= MAX_ONE_NB_OPE) {
-                Utils.message("Saisir un nombre : ");
-                number1 = getNumber();
-                //result = executeOneNumberOperation(userOpeChoice, number1);
-                result = SelectOperation.selectOption(userOpeChoice, number1);
+        } else if (userOpeChoice <= MAX_ONE_NB_OPE) {
+            Utils.message("Saisir un nombre : ");
+            number1 = getNumber();
+            //result = executeOneNumberOperation(userOpeChoice, number1);
+            result = SelectOperation.selectOption(userOpeChoice, number1);
+
+        } else {
+            Utils.message("Saisir votre op�ration : ");
+            final String prompt = prompt();
+            if (isMathsExpression(prompt)) {
+                result = Calcul.eval(prompt);
+            } else {
+                System.out.print("Expression invalide");
+                result = -1;
             }
-            
-         }
+        }
         displayResultOperation(result);
         showSubMenu();
         manageSubMenu(userOpeChoice, prompt());
@@ -151,7 +155,53 @@ public final class Application {
             manageSubMenu(currentOperation, prompt());
         }
     }
-    
+
+    /**
+     * Check if user prompt is a valid math expression.
+     * @param str string to verify 
+     * @return boolean if is math expression
+     */
+    public static boolean isMathsExpression(final String str) {
+
+        boolean isValid;
+        pattern = Pattern.compile("((\\d*\\.\\d+)|(\\d+)|([\\+\\-\\*/\\(\\)\\^]))");
+        matcher = pattern.matcher(str);
+        final StringBuilder output = new StringBuilder();
+        while (matcher.find()) {
+            output.append(matcher.group());
+        }
+        if (output.length() == str.length() &&
+                output.length() != 0 && !isContainDoubleOperator(str)) {
+            isValid = true;
+        } else {
+            isValid = false;
+        }
+        return isValid;
+    }
+
+    /**
+     * Check if String contain two consecutive operators.
+     * @param str string to verify
+     * @return boolean is contain double operator 
+     */
+    public static boolean isContainDoubleOperator(final String str) {
+        boolean isDoubleOperator = false;
+        for (final char ch: str.toCharArray()) {
+
+            if (ch == previousChar && operatorList.indexOf(ch) != NOT_FOUND
+                    || (parentheseList.indexOf(ch) != NOT_FOUND && (parentheseList.indexOf(previousChar) != -1))
+                    || (operatorList.indexOf(previousChar) == NOT_FOUND && ch == '(')
+                    ) {
+                isDoubleOperator = true;
+                break;
+            }
+
+            previousChar = ch;
+        }
+
+        return isDoubleOperator;
+    }
+
     /**
      * User prompt.
      * @return user prompt
@@ -162,7 +212,7 @@ public final class Application {
         logger.info("End reading user input");
         return scannerInputUser.nextLine();
     }
-    
+
     /**
      * Show application menu.
      */
@@ -171,7 +221,7 @@ public final class Application {
         System.out.print("\r\n*************************************** \r\n");
         System.out.print("* Bienvenue dans votre calculatrice ! * \r\n");
         System.out.print("*************************************** \r\n \r\n");
-        
+
         System.out.print("1- Addition \r\n");
         System.out.print("2- Soustraction\r\n");
         System.out.print("3- Multiplication\r\n");
@@ -182,20 +232,32 @@ public final class Application {
         System.out.print("8- cos\r\n");
         System.out.print("9- tang\r\n");
         System.out.print("10- Historique des opérations\r\n");
+        System.out.print("11- Opération libre\r\n");
         logger.info("End show menu");
     }
-    
+
+    /**
+     * Manage menu.
+     */
+    private static void manageMenu(final String userInput) {        
+        if ("q".equals(userInput)) {
+            exitApp();
+        } else {
+            if (Utils.tryParseDouble(userInput)) {
+                final int userNumber = Integer.parseInt(userInput);
+                manageOperation(userNumber);
+            } else {
+                Utils.message("Veuillez saisir une valeur entre 1 et 11 (q = quitter)");
+                manageMenu(prompt());
+            }
+        }
+    }
+
     /**
      * Show submenu.
      */
     public static void showSubMenu() {
         System.out.print("\r\n0- Retour au menu \r\n");
         System.out.print("1- Nouvelle opération\r\n");
-    }
-    /**
-     * Constructor.
-     */
-    private Application() {
-        super();
     }
 }

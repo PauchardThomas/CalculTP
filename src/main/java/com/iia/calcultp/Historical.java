@@ -58,11 +58,11 @@ public final class Historical {
                 try {
                     new File(filePathString, fileName).createNewFile();
                 } catch (FileSystemException e) {
-                    e.printStackTrace();
+                    Utils.message(e.getMessage());
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Utils.message(e.getMessage());
         }
 
     }
@@ -76,7 +76,7 @@ public final class Historical {
                 System.out.print("* Destruction fichier ! * \r\n");
                 Files.delete(path);
             } catch (IOException e) {
-                e.printStackTrace();
+                Utils.message(e.getMessage());
             }
         }
     }
