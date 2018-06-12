@@ -13,6 +13,13 @@ public final class TestLog4j1 {
     private static Logger logger = LogManager.getLogger(TestLog4j1.class);
 
     /**
+     * Constructor.
+     */
+    private TestLog4j1() {
+        super();
+    }
+    
+    /**
      * Message from logger.
      * @param args
      */
