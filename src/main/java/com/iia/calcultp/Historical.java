@@ -4,6 +4,7 @@ package com.iia.calcultp;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystemException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -24,8 +25,9 @@ public final class Historical {
     /** Path + file complete. */
     private static Path path = Paths.get(filePathString + fileName);
 
-    private static final File fileList = new File("."); // current directory
-
+    /** Operation result. */
+    private static boolean result;
+    
     /**
      * Constructor.
      */
@@ -36,13 +38,13 @@ public final class Historical {
     /**
      * Init file on her directory.
      */
-    public static void initFile() {
+    public static boolean initFile() {
         if (Files.exists(path)) {
             System.out.print("* Fichier non créé ! * \r\n");
         } else {
             createFile();
         }
-
+        return result;
     }
 
     /**
@@ -53,7 +55,11 @@ public final class Historical {
             System.out.print("* Création fichier ! * \r\n");
             path = Paths.get(filePathString);
             if (Files.isDirectory(path)) {
-                new File(filePathString, fileName).createNewFile();
+                try {
+                    new File(filePathString, fileName).createNewFile();
+                } catch (FileSystemException e) {
+                    e.printStackTrace();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -70,28 +76,6 @@ public final class Historical {
                 System.out.print("* Destruction fichier ! * \r\n");
                 Files.delete(path);
             } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-    /**
-     * List current directory.
-     */
-    public static void listFile() {
-
-        final File[] files = fileList.listFiles();
-        for (final File file : files) {
-            if (file.isDirectory()) {
-                System.out.print("directory:");
-            } else {
-                System.out.print("     file:");
-            }
-            try {
-                System.out.println(file.getCanonicalPath());
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
