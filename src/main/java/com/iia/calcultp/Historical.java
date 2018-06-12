@@ -4,9 +4,9 @@ package com.iia.calcultp;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.*;
-
-import javax.naming.spi.DirectoryManager;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * 
@@ -15,15 +15,17 @@ import javax.naming.spi.DirectoryManager;
  */
 public final class Historical {
 
-    /** Path od directory ressources */
+    /** Path od directory ressources. */
     private static String filePathString = "src\\main\\resources";
-    
+
     /** Name of file. */
     private static String fileName = "historical.txt";
-    
-    /** Path + file complete */
+
+    /** Path + file complete. */
     private static Path path = Paths.get(filePathString + fileName);
-    
+
+    private static final File fileList = new File("."); // current directory
+
     /**
      * Constructor.
      */
@@ -32,79 +34,66 @@ public final class Historical {
     }
 
     /**
-     * Init file on her directory
+     * Init file on her directory.
      */
     public static void initFile() {
         if (!Files.exists(path)) {
             createFile();
-        }
-        else {
+        } else {
             System.out.print("* Fichier non créé ! * \r\n");
         }
 
     }
 
     /**
-     * Create file in directory
+     * Create file in directory.
      */
     public static void createFile() {
         try {
             System.out.print("* Création fichier ! * \r\n");
             path = Paths.get(filePathString);
-            if(Files.isDirectory(path)){
+            if (Files.isDirectory(path)) {
                 new File(filePathString, fileName).createNewFile();
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
 
     /**
-     * Delete file in directory
+     * Delete file in directory.
      */
     public static void deleteFile() {
         if (Files.exists(path)) {
             try {
                 System.out.print("* Destruction fichier ! * \r\n");
                 Files.delete(path);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-
-            catch (IOException e) {
-            }
         }
 
-    }
-    
-    /**
-     * List current directory 
-     */
-    public static void listFile(){
-    File f = new File("."); // current directory
-
-    File[] files = f.listFiles();
-    for (File file : files) {
-        if (file.isDirectory()) {
-            System.out.print("directory:");
-        } else {
-            System.out.print("     file:");
-        }
-        try {
-            System.out.println(file.getCanonicalPath());
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
     }
 
     /**
-     * Log of calculate
+     * List current directory.
      */
-    public static void insertCalculFile(final Path path) {
+    public static void listFile() {
 
+        final File[] files = fileList.listFiles();
+        for (final File file : files) {
+            if (file.isDirectory()) {
+                System.out.print("directory:");
+            } else {
+                System.out.print("     file:");
+            }
+            try {
+                System.out.println(file.getCanonicalPath());
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
     }
-    
-    
-
 }
