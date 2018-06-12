@@ -13,6 +13,8 @@ public final class Application {
 
     /** Max menu number for an operation with 2 numbers. */
     private static final int MAX_TWO_NB_OPE = 5;
+    /** Max menu number for an operation with 1 numbers. */
+    private static final int MAX_ONE_NB_OPE = 9;
     /**User input number.*/
     private static String number = "";
     /**User input first number.*/
@@ -51,10 +53,13 @@ public final class Application {
             //result =  executeTwoNumbersOperation(userOpeChoice, number1, number2);
             result = SelectOperation.selectOptionWithTwoNumbers(userOpeChoice, number1, number2);
          } else {
-            Utils.message("Saisir un nombre : ");
-            number1 = getNumber();
-            //result = executeOneNumberOperation(userOpeChoice, number1);
-            result = SelectOperation.selectOption(userOpeChoice, number1);
+            if(userOpeChoice <= MAX_ONE_NB_OPE) {
+                Utils.message("Saisir un nombre : ");
+                number1 = getNumber();
+                //result = executeOneNumberOperation(userOpeChoice, number1);
+                result = SelectOperation.selectOption(userOpeChoice, number1);
+            }
+            
          }
         displayResultOperation(result);
         showSubMenu();
@@ -112,7 +117,7 @@ public final class Application {
                 final int userNumber = Integer.parseInt(userInput);
                 manageOperation(userNumber);
             } else {
-                Utils.message("Veuillez saisir une valeur entre 1 et 8 (q = quitter)");
+                Utils.message("Veuillez saisir une valeur entre 1 et 10 (q = quitter)");
                 manageMenu(prompt());
             }
         }
