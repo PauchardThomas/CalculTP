@@ -2,8 +2,6 @@
 
 package com.iia.calcultp;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
