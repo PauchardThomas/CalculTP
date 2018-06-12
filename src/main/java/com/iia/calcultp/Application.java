@@ -116,7 +116,7 @@ public final class Application {
             //result = executeOneNumberOperation(userOpeChoice, number1);
             result = SelectOperation.selectOption(userOpeChoice, number1);
 
-        } else {
+        } else if(userOpeChoice == 12) {
             Utils.message("Saisir votre opération : ");
             final String prompt = prompt();
             if (isMathsExpression(prompt)) {
@@ -125,6 +125,14 @@ public final class Application {
                 System.out.print("Expression invalide");
                 result = -1;
             }
+        } else if (userOpeChoice == 11) {
+            boolean isDeleted = Historical.deleteFile();
+            if (isDeleted) {
+                System.out.print("Historique supprimé !");
+            } else {
+                System.out.print("Echec de la suppression !");
+            }
+            
         }
         displayResultOperation(result);
         showSubMenu();
@@ -233,7 +241,8 @@ public final class Application {
         System.out.print("8- cos\r\n");
         System.out.print("9- tang\r\n");
         System.out.print("10- Historique des opérations\r\n");
-        System.out.print("11- Opération libre\r\n");
+        System.out.print("11- Supprimer historique\r\n");
+        System.out.print("12- Opération libre\r\n");
         logger.info("End show menu");
     }
 
