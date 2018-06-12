@@ -3,9 +3,9 @@
 package com.iia.calcultp;
 
 import java.util.Scanner;
-
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 
 
 /**
@@ -33,12 +33,43 @@ public final class Application {
 
 
     /**
-     * Constructor.
+     * Display operation result.
+     * @param result
      */
-    private Application() {
-        super();
+    public static void displayResultOperation(final double result) {
+        if (result == -1) {
+            Utils.message("Pas de résultat");
+        } else {
+            Utils.message("resultat de l'opération : " + result); 
+        }
     }
 
+    /**
+     * Exit the calculator.
+     */
+    public static void exitApp() {
+        System.out.print("Au revoir!");
+        System.exit(0);
+        logger.info("Exit application");
+    }
+    
+    /**
+     * Get user prompt number.
+     * @return user prompt number
+     */
+    public static double getNumber() {
+        do {
+           number = prompt();
+           if (number.contains(",")) {
+               logger.info("Get number with char ',' " + number);
+               number = number.replaceAll(",", ".");
+               logger.info("Get number after replace char " + number);
+           }
+        }while(!Utils.tryParseDouble(number));
+
+        return Double.parseDouble(number);
+    }
+    
     /**
      * Entry point of application.
      * @param args Arguments from CLI.
@@ -50,6 +81,26 @@ public final class Application {
         //Historical.listFile();
         showMenu();
         manageMenu(prompt());
+    }
+    
+    /**
+     * Manage menu.
+     */
+    private static void manageMenu(final String userInput) {
+        logger.info("User input " + userInput);
+        if ("q".equals(userInput)) {
+            logger.info("Start method exitApp");
+            exitApp();
+            logger.info("End method exitApp");
+        } else {
+            if (Utils.tryParseDouble(userInput)) {
+                final int userNumber = Integer.parseInt(userInput);
+                manageOperation(userNumber);
+            } else {
+                Utils.message("Veuillez saisir une valeur entre 1 et 10 (q = quitter)");
+                manageMenu(prompt());
+            }
+        }
     }
     
     /**
@@ -79,79 +130,6 @@ public final class Application {
     }
     
     /**
-     * Display operation result.
-     * @param result
-     */
-    public static void displayResultOperation(final double result) {
-        if (result == -1) {
-            Utils.message("Pas de résultat");
-        } else {
-            Utils.message("resultat de l'opération : " + result); 
-        }
-    }
-    
-    /**
-     * Exit the calculator.
-     */
-    public static void exitApp() {
-        System.out.print("Au revoir!");
-        System.exit(0);
-        logger.info("Exit application");
-    }
-    
-    /**
-     * Show application menu.
-     */
-    public static void showMenu() {
-        logger.info("Show menu");
-        System.out.print("\r\n*************************************** \r\n");
-        System.out.print("* Bienvenue dans votre calculatrice ! * \r\n");
-        System.out.print("*************************************** \r\n \r\n");
-        
-        System.out.print("1- Addition \r\n");
-        System.out.print("2- Soustraction\r\n");
-        System.out.print("3- Multiplication\r\n");
-        System.out.print("4- Division\r\n");
-        System.out.print("5- Modulo\r\n");
-        System.out.print("6- Pourcentage\r\n");
-        System.out.print("7- sin\r\n");
-        System.out.print("8- cos\r\n");
-        System.out.print("9- tang\r\n");
-        System.out.print("10- Historique des opérations\r\n");
-        logger.info("End show menu");
-    }
-    
-    /**
-     * Manage menu.
-     */
-    private static void manageMenu(final String userInput) {
-        logger.info("User input " + userInput);
-        if ("q".equals(userInput)) {
-            logger.info("Start method exitApp");
-            exitApp();
-            logger.info("End method exitApp");
-        } else {
-            if (Utils.tryParseDouble(userInput)) {
-                final int userNumber = Integer.parseInt(userInput);
-                manageOperation(userNumber);
-            } else {
-                Utils.message("Veuillez saisir une valeur entre 1 et 10 (q = quitter)");
-                manageMenu(prompt());
-            }
-        }
-    }
-    
-    /**
-     * Show submenu.
-     */
-    public static void showSubMenu() {
-        logger.info("Start submenu");
-        System.out.print("\r\n0- Retour au menu \r\n");
-        System.out.print("1- Nouvelle opération\r\n");
-        logger.info("End submenu");
-    }
-    
-    /**
      * Manage submenu.
      * @param currentOperation currentOperation
      */
@@ -177,22 +155,6 @@ public final class Application {
     }
     
     /**
-     * Get user prompt number.
-     * @return user prompt number
-     */
-    public static double getNumber() {
-        do {
-           number = prompt();
-           if (number.contains(",")) {
-               logger.info("Get number with char ',' " + number);
-               number = number.replaceAll(",", ".");
-               logger.info("Get number after replace char " + number);
-           }
-        }while(!Utils.tryParseDouble(number));
-
-        return Double.parseDouble(number);
-    }
-    /**
      * User prompt.
      * @return user prompt
      */
@@ -201,5 +163,43 @@ public final class Application {
         final Scanner scannerInputUser = new Scanner(System.in, "UTF-8");
         logger.info("End reading user input");
         return scannerInputUser.nextLine();
+    }
+    
+    /**
+     * Show application menu.
+     */
+    public static void showMenu() {
+        logger.info("Show menu");
+        System.out.print("\r\n*************************************** \r\n");
+        System.out.print("* Bienvenue dans votre calculatrice ! * \r\n");
+        System.out.print("*************************************** \r\n \r\n");
+        
+        System.out.print("1- Addition \r\n");
+        System.out.print("2- Soustraction\r\n");
+        System.out.print("3- Multiplication\r\n");
+        System.out.print("4- Division\r\n");
+        System.out.print("5- Modulo\r\n");
+        System.out.print("6- Pourcentage\r\n");
+        System.out.print("7- sin\r\n");
+        System.out.print("8- cos\r\n");
+        System.out.print("9- tang\r\n");
+        System.out.print("10- Historique des opérations\r\n");
+        logger.info("End show menu");
+    }
+    
+    /**
+     * Show submenu.
+     */
+    public static void showSubMenu() {
+        logger.info("Start submenu");
+        System.out.print("\r\n0- Retour au menu \r\n");
+        System.out.print("1- Nouvelle opération\r\n");
+        logger.info("End submenu");
+    }
+    /**
+     * Constructor.
+     */
+    private Application() {
+        super();
     }
 }
